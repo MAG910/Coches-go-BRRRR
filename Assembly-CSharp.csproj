@@ -56,18 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\shadow.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
-    <Compile Include="Assets\fisicas.cs" />
+    <Compile Include="Assets\Scripts\fisicas.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
-    <Compile Include="Assets\rbf.cs" />
-    <Compile Include="Assets\ParticleController.cs" />
+    <Compile Include="Assets\Scripts\carSound.cs" />
+    <Compile Include="Assets\Scripts\rbf.cs" />
+    <Compile Include="Assets\Scripts\limitFPS.cs" />
+    <Compile Include="Assets\Scripts\ParticleController.cs" />
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
-    <Compile Include="Assets\girar.cs" />
-    <Compile Include="Assets\carSound.cs" />
-    <Compile Include="Assets\limitFPS.cs" />
-    <Compile Include="Assets\shadow.cs" />
+    <Compile Include="Assets\Scripts\girar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

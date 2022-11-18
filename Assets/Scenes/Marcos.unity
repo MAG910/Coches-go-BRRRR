@@ -479,8 +479,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 99.5
-  field of view: 50
+  far clip plane: 51.5
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -505,7 +505,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282840810}
-  m_LocalRotation: {x: 0.14208722, y: -0.00000001702926, z: 0.0000000024444413, w: 0.98985416}
+  m_LocalRotation: {x: 0.14208722, y: 0.00000001684443, z: -0.00000000241791, w: 0.98985416}
   m_LocalPosition: {x: 0, y: 0.9499998, z: -2.91}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
@@ -1849,7 +1849,7 @@ Light:
     m_Type: 2
     m_Resolution: 0
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.5
     m_Bias: 0.02
     m_NormalBias: 0.18
     m_NearPlane: 0.36
@@ -2257,6 +2257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carAudio: {fileID: 1594276978}
   pitchfactor: 20
+  anim: {fileID: 2019549616}
 --- !u!1 &1662221240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,10 +2533,10 @@ MonoBehaviour:
   m_LookAt: {fileID: 862095594}
   m_Follow: {fileID: 1594276974}
   m_Lens:
-    FieldOfView: 50
+    FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.3
-    FarClipPlane: 99.5
+    FarClipPlane: 51.5
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -2556,7 +2557,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802819824}
-  m_LocalRotation: {x: -0, y: 4.1112003e-11, z: -1.2051693e-11, w: 1}
+  m_LocalRotation: {x: -0, y: -0.0000000025380409, z: 7.439682e-10, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2581,7 +2582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1921601490
 Transform:
   m_ObjectHideFlags: 0
@@ -2724,6 +2725,7 @@ GameObject:
   - component: {fileID: 2019549615}
   - component: {fileID: 2019549614}
   - component: {fileID: 2019549613}
+  - component: {fileID: 2019549616}
   m_Layer: 0
   m_Name: Body (1)
   m_TagString: Untagged
@@ -2814,6 +2816,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019549611}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &2019549616
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019549611}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83739da02e9d88545a78d3f3ffbb91b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &324476963277269844
 GameObject:
   m_ObjectHideFlags: 0
