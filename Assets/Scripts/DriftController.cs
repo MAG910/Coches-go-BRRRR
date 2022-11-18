@@ -381,10 +381,7 @@ public class DriftController : MonoBehaviour {
 
         // Add the drot to current rotation
         transform.rotation *= Quaternion.AngleAxis(drot.y, transform.up);
-        //rigidBody.rotation *= Quaternion.AngleAxis(drot.y, transform.up);
-        //transform.Rotate(drot, Space.Self);
-        //rigidBody.AddTorque(drot);
-        //rigidBody.MoveRotation(rigidBody.rotation * Quaternion.Euler(drot));
+    
     }
     #endregion
 
