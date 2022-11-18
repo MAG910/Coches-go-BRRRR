@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\shadow.cs" />
+    <Compile Include="Assets\Scripts\trigger.cs" />
     <Compile Include="Assets\Scripts\fisicas.cs" />
     <Compile Include="Assets\Scripts\rbf.cs" />
     <Compile Include="Assets\Scripts\limitFPS.cs" />
@@ -68,7 +69,6 @@
     <Compile Include="Assets\Scripts\ParticleController.cs" />
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
-    <Compile Include="Assets\Scripts\trigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
