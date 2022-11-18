@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class rbf : MonoBehaviour
 {
-    Rigidbody rb;
+    /*Rigidbody rb;
     public float angle;
 
     private void Start()
@@ -23,5 +23,5 @@ public class rbf : MonoBehaviour
 
             transform.rotation = Vector3.Lerp(transform.rotation, q , 5 * Time.deltaTime) ;
         }
-    }
+    }*/
 }

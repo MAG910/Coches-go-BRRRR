@@ -41,7 +41,7 @@ public class DriftController : MonoBehaviour {
     public AnimationCurve SlipU;    // Slip hysteresis full to static (y, output = slip ratio)
     public float SlipMod = 20f;     // Basically widens the slip curve
                                     // (determine the min speed to reach max slip)
-
+    float a;
     // AI-specific parameters
     [Header("AI Behaviors")]
     public float turnTh = 20f;      // Delta threshold to goal before start turning
@@ -101,6 +101,7 @@ public class DriftController : MonoBehaviour {
         rigidBody.centerOfMass = Vector3.Scale(groupCollider.extents, CoM);
 
         //distToGround = transform.position.y + 1f;
+        a = Accel;
     }
 
     // Called once per frame
@@ -112,6 +113,15 @@ public class DriftController : MonoBehaviour {
             transform.position = spawnP;
             transform.rotation = spawnR;
             inReset = true;
+        }
+        
+        if (Input.GetButton("Brake"))
+        {
+            Accel = 10;
+        }
+        else
+        {
+            Accel = a;
         }
     }
 
@@ -246,9 +256,11 @@ public class DriftController : MonoBehaviour {
     #region Controllers
     // Get input values from keyboard
     void InputKeyboard() {
-        inThrottle = Input.GetAxisRaw("Throttle");
         inBoost = Input.GetAxisRaw("Boost") > 0f;
         inTurn = Input.GetAxisRaw("Sideways");
+        inThrottle = 1;
+
+       
 
         // Reset will turn false after the respawn is successful
         inReset = inReset || Input.GetKeyDown(KeyCode.R);

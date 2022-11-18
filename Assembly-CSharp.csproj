@@ -57,14 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
+    <Compile Include="Assets\fisicas.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
+    <Compile Include="Assets\rbf.cs" />
     <Compile Include="Assets\ParticleController.cs" />
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
     <Compile Include="Assets\girar.cs" />
-    <Compile Include="Assets\fisicas.cs" />
-    <Compile Include="Assets\rbf.cs" />
+    <Compile Include="Assets\carSound.cs" />
+    <Compile Include="Assets\limitFPS.cs" />
+    <Compile Include="Assets\shadow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
