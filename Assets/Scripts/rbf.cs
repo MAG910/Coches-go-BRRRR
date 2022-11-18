@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class rbf : MonoBehaviour
 {
-    /*Rigidbody rb;
-    public float angle;
-
+    Rigidbody rb;
+    float rotationZ;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
-    void Update()
+    void FixedUpdate()
+
     {
-        rb.AddForce(0, 0, 400, ForceMode.Acceleration);
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, -transform.up, out hit, 10))
-        {
-            Quaternion q = new Quaternion(transform.rotation.x, transform.rotation.y, hit.transform.rotation.z, transform.rotation.w);
-
-            transform.rotation = Vector3.Lerp(transform.rotation, q , 5 * Time.deltaTime) ;
+        
+        rb.AddForce(0, 0, 4, ForceMode.Acceleration);
+        Debug.Log(transform.rotation.z + " a");
+        if (transform.rotation.z > 0.25f || transform.rotation.z < -0.25f){
+            rotationZ = Mathf.Clamp(transform.rotation.z, -0.25f, 0.25f);
+            transform.localEulerAngles = (new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, Mathf.LerpAngle(transform.localEulerAngles.z, rotationZ, Time.deltaTime))).normalized;
         }
-    }*/
+        
+    }
+
 }
