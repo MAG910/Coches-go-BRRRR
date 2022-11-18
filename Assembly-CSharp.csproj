@@ -62,6 +62,9 @@
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
+    <Compile Include="Assets\girar.cs" />
+    <Compile Include="Assets\fisicas.cs" />
+    <Compile Include="Assets\rbf.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
