@@ -13,7 +13,6 @@ public class carSound : MonoBehaviour
     float vel, animd;
     float b;
 
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,5 +39,7 @@ public class carSound : MonoBehaviour
         }
         b = Mathf.Lerp(b, a, 10 * Time.deltaTime);
         anim.SetFloat("Blend", b);
+
+        
     }
 }

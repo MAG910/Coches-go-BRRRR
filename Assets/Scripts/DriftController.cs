@@ -12,7 +12,9 @@ public enum Faction {
 public class DriftController : MonoBehaviour {
 
     #region Parameters
-    public float Accel = 15.0f;         // In meters/second2
+    public float Accel = 15.0f;
+    public bool Nitro;
+
     public float Boost = 4f/3;          // In ratio
     public float TopSpeed = 30.0f;      // In meters/second
     //public float Jump = 3.0f;           // In meters/second2
@@ -115,9 +117,12 @@ public class DriftController : MonoBehaviour {
             inReset = true;
         }
         
-        if (Input.GetButton("Brake"))
+        if (Input.GetButton("Brake") && !Nitro)
         {
             Accel = 10;
+        }else if (!Input.GetButton("Brake") && Nitro)
+        {
+            Accel = a + 30;
         }
         else
         {
