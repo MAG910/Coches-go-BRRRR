@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638044668548825200
+  lastModified: 638044734588330028
   FileSizes: []
   Exists: 1
 --- !u!114 &-2180323959748132033
@@ -132,10 +132,10 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638044668547683144
+  lastModified: 638044734584408490
   FileSizes:
   - Name: 
-    Value: 1120
+    Value: 1204
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -158,12 +158,14 @@ MonoBehaviour:
   - {fileID: 5472417165014951271}
   - {fileID: 509670056630734945}
   - {fileID: -1005085611520823742}
+  - {fileID: 2917258066016809982}
+  - {fileID: 3642866017070095767}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1431913365850061860}
   StringsBanks:
   - {fileID: -844825420256730932}
-  cacheTime: 638044668549453515
+  cacheTime: 638044734588828658
   cacheVersion: 131593
 --- !u!114 &509670056630734945
 MonoBehaviour:
@@ -209,7 +211,7 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638044668547633280
+  lastModified: 638044734584368602
   FileSizes: []
   Exists: 1
 --- !u!114 &1978425561038443345
@@ -236,6 +238,60 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2917258066016809982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Intro Music
+  m_EditorClassIdentifier: 
+  Path: event:/Intro Music
+  Guid:
+    Data1: 987222279
+    Data2: 1240459781
+    Data3: 648829072
+    Data4: -1089198554
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5625
+--- !u!114 &3642866017070095767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Music
+  Guid:
+    Data1: -395982687
+    Data2: 1095414498
+    Data3: 386841506
+    Data4: 1771275329
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 101721
 --- !u!114 &5472417165014951271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +336,6 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638044668549453515
+  lastModified: 638044734588828658
   FileSizes: []
   Exists: 1
