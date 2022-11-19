@@ -1,6 +1,76 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-6724015518733828640
+=======
+--- !u!114 &-8644917168980455192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game Music/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  StudioPath: 
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 619274992
+    data2: 2592902008
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7641806730040956639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SubaruEngine/DriftRate
+  m_EditorClassIdentifier: 
+  Name: DriftRate
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2686675280
+    data2: 2702240625
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7634458487055562414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound Banks/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638044734588330028
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2180323959748132033
+>>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,7 +94,88 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-6428626795599648893
+=======
+--- !u!114 &-1005085611520823742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Turbo Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Turbo Sound
+  Guid:
+    Data1: 1236170251
+    Data2: 1150260260
+    Data3: -111077228
+    Data4: -1604659533
+  Banks:
+  - {fileID: 7953910825171007620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3979
+--- !u!114 &-844825420256730932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound Banks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638044734584408490
+  FileSizes:
+  - Name: 
+    Value: 1204
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -844825420256730932}
+  - {fileID: 1431913365850061860}
+  - {fileID: 7953910825171007620}
+  - {fileID: -7634458487055562414}
+  EditorEvents:
+  - {fileID: 5472417165014951271}
+  - {fileID: 509670056630734945}
+  - {fileID: -1005085611520823742}
+  - {fileID: 2917258066016809982}
+  - {fileID: 3642866017070095767}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 1431913365850061860}
+  StringsBanks:
+  - {fileID: -844825420256730932}
+  cacheTime: 638044734588828658
+  cacheVersion: 131593
+--- !u!114 &509670056630734945
+>>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Turbo Sound
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   Path: event:/Turbo Sound
   Guid:
@@ -91,6 +243,12 @@ MonoBehaviour:
 =======
   lastModified: 638044734588330028
 >>>>>>> 10d6bc644ba967b7262cbd5679d8b8dac7dfa36e
+=======
+  Path: Assets/Sound Banks/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638044734584368602
+>>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
   FileSizes: []
   Exists: 1
 --- !u!114 &-2180323959748132033
@@ -118,7 +276,65 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-3466543705447967252
+=======
+--- !u!114 &2917258066016809982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Intro Music
+  m_EditorClassIdentifier: 
+  Path: event:/Intro Music
+  Guid:
+    Data1: 987222279
+    Data2: 1240459781
+    Data3: 648829072
+    Data4: -1089198554
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5625
+--- !u!114 &3642866017070095767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Music
+  Guid:
+    Data1: -395982687
+    Data2: 1095414498
+    Data3: 386841506
+    Data4: 1771275329
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 101721
+--- !u!114 &5472417165014951271
+>>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,6 +486,7 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
+<<<<<<< HEAD
   lastModified: 638044705316563401
 =======
   Path: Assets/Sound Banks/Desktop/Master.bank
@@ -281,6 +498,9 @@ MonoBehaviour:
   lastModified: 638044734584368602
 >>>>>>> 10d6bc644ba967b7262cbd5679d8b8dac7dfa36e
 >>>>>>> Stashed changes
+=======
+  lastModified: 638044734588828658
+>>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
   FileSizes: []
   Exists: 1
 --- !u!114 &4219482795321980109
