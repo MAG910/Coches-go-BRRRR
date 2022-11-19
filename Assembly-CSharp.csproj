@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\limitFPS.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\girar.cs" />
+    <Compile Include="Assets\Scripts\susMusicIntensity.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\ChangeSceneOnEnterOrSecs.cs" />

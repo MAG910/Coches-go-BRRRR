@@ -17,6 +17,7 @@ public class die : MonoBehaviour
     private void Start()
     {
         ded = false;
+        isDed = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +32,13 @@ public class die : MonoBehaviour
 
             ded = true;
         }
+       
+
+
+    }
+
+    private void Update()
+    {
         if (isDed)
         {
             Car.isKinematic = true;
@@ -39,7 +47,5 @@ public class die : MonoBehaviour
 
             ded = true;
         }
-
-
     }
 }

@@ -41,10 +41,9 @@ public class trigger : MonoBehaviour
             OnNitro = true;
             Destroy(other.gameObject);            
         }
-        if (other.gameObject.tag==("CanDie"))
+        if (other.gameObject.tag == "CanDie")
         {
             die.isDed = true;
-            Debug.Log("a");
         }
     }
 
