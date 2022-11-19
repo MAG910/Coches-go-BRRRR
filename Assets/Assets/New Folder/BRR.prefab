@@ -2,7 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 =======
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &5914264884306375749
@@ -208,7 +211,10 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6546306498067901275
@@ -551,9 +557,12 @@ GameObject:
   - component: {fileID: 6546306498285248153}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
   - component: {fileID: 6546306498285248133}
 =======
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
   m_Layer: 0
@@ -679,6 +688,7 @@ MonoBehaviour:
   inTurn: 0
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 --- !u!114 &6546306498285248133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +706,8 @@ MonoBehaviour:
   anim: {fileID: 6546306498774352710}
 =======
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6546306498378255726
@@ -821,10 +833,14 @@ TrailRenderer:
       atime0: 0
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
       atime1: 65535
 =======
       atime1: 25250
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+      atime1: 25250
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
       atime1: 25250
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
@@ -6004,12 +6020,17 @@ Transform:
   m_GameObject: {fileID: 6546306499028580870}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
   m_LocalRotation: {x: -0, y: 0.00000003538183, z: -0.0000000103713695, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
 =======
   m_LocalRotation: {x: -0.00000046938658, y: -0.5426925, z: 0.15907817, w: 0.82472974}
   m_LocalPosition: {x: -98.3976, y: -98.047935, z: -322.5433}
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+  m_LocalRotation: {x: -0.00000046938658, y: -0.5426925, z: 0.15907817, w: 0.82472974}
+  m_LocalPosition: {x: -98.3976, y: -98.047935, z: -322.5433}
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
   m_LocalRotation: {x: -0.00000046938658, y: -0.5426925, z: 0.15907817, w: 0.82472974}
   m_LocalPosition: {x: -98.3976, y: -98.047935, z: -322.5433}
@@ -6229,12 +6250,17 @@ Transform:
   m_GameObject: {fileID: 6546306499185142812}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
   m_LocalRotation: {x: 0.14208722, y: -0.000000017668766, z: 0.0000000025362383, w: 0.98985416}
   m_LocalPosition: {x: 0, y: 0.9499998, z: -2.91}
 =======
   m_LocalRotation: {x: 0.11718403, y: 0.55978936, z: -0.080354504, w: 0.816362}
   m_LocalPosition: {x: 349.90985, y: 4.31, z: 26.77997}
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+  m_LocalRotation: {x: 0.11718403, y: 0.55978936, z: -0.080354504, w: 0.816362}
+  m_LocalPosition: {x: 349.90985, y: 4.31, z: 26.77997}
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
   m_LocalRotation: {x: 0.11718403, y: 0.55978936, z: -0.080354504, w: 0.816362}
   m_LocalPosition: {x: 349.90985, y: 4.31, z: 26.77997}
@@ -7527,7 +7553,10 @@ TrailRenderer:
   m_Emitting: 1
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 =======
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6597226281017016718
@@ -7577,7 +7606,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tocpy: {fileID: 6546306498285248152}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6650847366848780967
@@ -7612,9 +7644,13 @@ Transform:
   - {fileID: 6546306498285248152}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 =======
   - {fileID: 8484937183671907426}
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+  - {fileID: 8484937183671907426}
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
   - {fileID: 8484937183671907426}
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
@@ -7744,10 +7780,14 @@ TrailRenderer:
       atime0: 0
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
       atime1: 65535
 =======
       atime1: 25250
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+      atime1: 25250
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 =======
       atime1: 25250
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
