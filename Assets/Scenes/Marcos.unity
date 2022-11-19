@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526980366}
-  m_IndirectSpecularColor: {r: 0.00038479967, g: 0.0005805306, b: 0.0010058256, a: 1}
+  m_IndirectSpecularColor: {r: 0.00038480086, g: 0.00058053207, b: 0.0010058294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -164,14 +164,18 @@ MonoBehaviour:
       Data2: 1174962842
       Data3: -666347359
       Data4: 402303673
-    Path: event:/Menu Music
+    Path: event:/Game Music
   Event: 
   PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: Intensity
+    Value: 1
+  - Name: vel
+    Value: 11
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -272,6 +276,42 @@ Transform:
   m_Father: {fileID: 640648390}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -28.506, y: -8.544, z: 11.539}
+--- !u!1 &212298644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7368807973601470945, guid: 3e61b6ffe9ed51046bd5c5a12f691596,
+    type: 3}
+  m_PrefabInstance: {fileID: 7368807971969929219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &212298649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212298644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1236170251
+      Data2: 1150260260
+      Data3: -111077228
+      Data4: -1604659533
+    Path: event:/Turbo Sound
+  Event: 
+  PlayEvent: 3
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &388150160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1343,42 @@ Transform:
   m_Father: {fileID: 640648390}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -22.805, y: 0, z: 0}
+--- !u!1 &1736122313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6546306498112097131, guid: 03dd59393a663634c94cc3368c550bed,
+    type: 3}
+  m_PrefabInstance: {fileID: 6546306499442451190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1736122319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736122313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Turbo
+  EventReference:
+    Guid:
+      Data1: 1236170251
+      Data2: 1150260260
+      Data3: -111077228
+      Data4: -1604659533
+    Path: event:/Turbo Sound
+  Event: 
+  PlayEvent: 3
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1879522692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,12 +1551,12 @@ PrefabInstance:
     - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1.2434498e-14
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -3.7747583e-15
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142788, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
@@ -1515,12 +1591,12 @@ PrefabInstance:
     - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001703183
+      value: -0.000000017031802
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000024448106
+      value: 0.0000000024448066
       objectReference: {fileID: 0}
     - target: {fileID: 6650847366848780967, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
@@ -1563,7 +1639,11 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: DriftRate
+    Value: 0
+  - Name: RPM
+    Value: 1811
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -1580,6 +1660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2040954523}
+  isDrift: 0
   effectiveRPM: 0
   DRPM: 0
   minRPM: 0
