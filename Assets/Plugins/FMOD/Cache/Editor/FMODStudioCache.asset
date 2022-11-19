@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6582184003443911150
+--- !u!114 &-844825420256730932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,53 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../Coches-go-BRRRR-FMOD/sonidoJam/Build/Desktop/Master.strings.bank
+  Path: Assets/Sound Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638043922416648361
+  lastModified: 638044541431231697
   FileSizes:
-  - Name: Desktop
+  - Name: 
     Value: 852
-  Exists: 1
---- !u!114 &-4254624494276828864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../Coches-go-BRRRR-FMOD/sonidoJam/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638043922416598496
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
---- !u!114 &-2246516446634149406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: ../Coches-go-BRRRR-FMOD/sonidoJam/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638043922421307663
-  FileSizes:
-  - Name: Desktop
-    Value: 657024
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -73,18 +33,36 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6582184003443911150}
-  - {fileID: -4254624494276828864}
-  - {fileID: -2246516446634149406}
+  - {fileID: -844825420256730932}
+  - {fileID: 1431913365850061860}
+  - {fileID: 7953910825171007620}
   EditorEvents:
   - {fileID: 5472417165014951271}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4254624494276828864}
+  - {fileID: 1431913365850061860}
   StringsBanks:
-  - {fileID: -6582184003443911150}
-  cacheTime: 638043922421307663
+  - {fileID: -844825420256730932}
+  cacheTime: 638044541433373090
   cacheVersion: 131593
+--- !u!114 &1431913365850061860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound Banks/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638044541431171868
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1978425561038443345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +106,7 @@ MonoBehaviour:
     Data3: 1741073289
     Data4: -535217910
   Banks:
-  - {fileID: -2246516446634149406}
+  - {fileID: 7953910825171007620}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -137,3 +115,21 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7953910825171007620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound Banks/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638044541433373090
+  FileSizes: []
+  Exists: 1
