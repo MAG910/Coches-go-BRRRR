@@ -19,7 +19,7 @@ public class trozoCarreteraTrigger : MonoBehaviour
 
             M.SelectRandomPiece(ToInstantiateT);
 
-            M.PreviousSelectedTrack = this.gameObject;
+            //M.PreviousSelectedTrack = this.transform.parent.gameObject;
         }
     }
 }
