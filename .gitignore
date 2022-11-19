@@ -7,7 +7,7 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-# /[Ll]ogs/
+/[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
@@ -60,6 +60,7 @@ sysinfo.txt
 *.aab
 *.unitypackage
 *.app
+*.log
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -69,6 +70,7 @@ crashlytics-build.properties
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /[Aa]ssets/[Ss]treamingAssets/aa/*
@@ -97,9 +99,14 @@ UserSettings/Layouts/default-2021.dwlt
 UserSettings/EditorUserSettings.asset
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
 =======
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 UserSettings/Layouts/default-2021.dwlt
 UserSettings/EditorUserSettings.asset
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
+=======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
