@@ -248,7 +248,10 @@ MonoBehaviour:
   Name: Master
   StudioPath: bank:/Master
   lastModified: 638044734584368602
+<<<<<<< HEAD
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
   FileSizes: []
   Exists: 1
 --- !u!114 &-2180323959748132033
@@ -277,8 +280,11 @@ MonoBehaviour:
   Labels: []
   Exists: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-3466543705447967252
 =======
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
 --- !u!114 &2917258066016809982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +493,7 @@ MonoBehaviour:
   Name: SFX
   StudioPath: bank:/SFX
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 638044705316563401
 =======
   Path: Assets/Sound Banks/Desktop/Master.bank
@@ -501,6 +508,9 @@ MonoBehaviour:
 =======
   lastModified: 638044734588828658
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
+=======
+  lastModified: 638044734588828658
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
   FileSizes: []
   Exists: 1
 --- !u!114 &4219482795321980109

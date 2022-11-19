@@ -1,7 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 =======
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &5914264884306375749
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +207,10 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6546306498067901275
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,9 +550,12 @@ GameObject:
   - component: {fileID: 6546306498285248134}
   - component: {fileID: 6546306498285248153}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
   - component: {fileID: 6546306498285248133}
 =======
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
   m_Layer: 0
   m_Name: CarPlayer
   m_TagString: Untagged
@@ -669,6 +678,7 @@ MonoBehaviour:
   turnTh: 20
   inTurn: 0
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 --- !u!114 &6546306498285248133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,6 +696,8 @@ MonoBehaviour:
   anim: {fileID: 6546306498774352710}
 =======
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6546306498378255726
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,10 +820,14 @@ TrailRenderer:
       ctime7: 0
       atime0: 0
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
       atime1: 65535
 =======
       atime1: 25250
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+      atime1: 25250
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
       atime2: 0
       atime3: 0
       atime4: 0
@@ -5987,12 +6003,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6546306499028580870}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
   m_LocalRotation: {x: -0, y: 0.00000003538183, z: -0.0000000103713695, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
 =======
   m_LocalRotation: {x: -0.00000046938658, y: -0.5426925, z: 0.15907817, w: 0.82472974}
   m_LocalPosition: {x: -98.3976, y: -98.047935, z: -322.5433}
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+  m_LocalRotation: {x: -0.00000046938658, y: -0.5426925, z: 0.15907817, w: 0.82472974}
+  m_LocalPosition: {x: -98.3976, y: -98.047935, z: -322.5433}
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6207,12 +6228,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6546306499185142812}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
   m_LocalRotation: {x: 0.14208722, y: -0.000000017668766, z: 0.0000000025362383, w: 0.98985416}
   m_LocalPosition: {x: 0, y: 0.9499998, z: -2.91}
 =======
   m_LocalRotation: {x: 0.11718403, y: 0.55978936, z: -0.080354504, w: 0.816362}
   m_LocalPosition: {x: 349.90985, y: 4.31, z: 26.77997}
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+  m_LocalRotation: {x: 0.11718403, y: 0.55978936, z: -0.080354504, w: 0.816362}
+  m_LocalPosition: {x: 349.90985, y: 4.31, z: 26.77997}
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7500,7 +7526,10 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 =======
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6597226281017016718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7547,7 +7576,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tocpy: {fileID: 6546306498285248152}
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
 --- !u!1 &6650847366848780967
 GameObject:
   m_ObjectHideFlags: 0
@@ -7579,9 +7611,13 @@ Transform:
   - {fileID: 6546306499185142808}
   - {fileID: 6546306498285248152}
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
 =======
   - {fileID: 8484937183671907426}
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+  - {fileID: 8484937183671907426}
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7707,10 +7743,14 @@ TrailRenderer:
       ctime7: 0
       atime0: 0
 <<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
+<<<<<<< HEAD:Assets/Assets/New Folder/BRR.prefab
       atime1: 65535
 =======
       atime1: 25250
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c:Assets/Assets/BRR.prefab
+=======
+      atime1: 25250
+>>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e:Assets/Assets/BRR.prefab
       atime2: 0
       atime3: 0
       atime4: 0
