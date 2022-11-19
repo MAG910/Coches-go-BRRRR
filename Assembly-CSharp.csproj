@@ -56,7 +56,8 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MusicIntensity.cs" />
+    <Compile Include="Assets\Scripts\MusicIntensity.cs" />
+    <Compile Include="Assets\Scripts\trozoCarreteraTrigger.cs" />
     <Compile Include="Assets\Scripts\shadow.cs" />
     <Compile Include="Assets\Scripts\trigger.cs" />
     <Compile Include="Assets\Scripts\fisicas.cs" />
@@ -66,14 +67,16 @@
     <Compile Include="Assets\Scripts\girar.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\ChangeSceneOnEnterOrSecs.cs" />
+    <Compile Include="Assets\Scripts\SeleccionarTrozo.cs" />
     <Compile Include="Assets\Scripts\ParticleController.cs" />
     <Compile Include="Assets\Scripts\SecondOrderDynamics1D.cs" />
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
     <Compile Include="Assets\Scripts\CarAudio.cs" />
-    <Compile Include="Assets\Scenes\trozoCarreteraTrigger.cs" />
-    <Compile Include="Assets\Scenes\SeleccionarTrozo.cs" />
-    <Compile Include="Assets\Scenes\ChangeSceneOnEnterOrSecs.cs" />
+    <Compile Include="Assets\Scripts\copyPos.cs" />
+    <Compile Include="Assets\Scripts\die.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
