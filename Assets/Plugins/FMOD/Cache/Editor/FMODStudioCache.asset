@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Turbo Sound
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Path: event:/Turbo Sound
   Guid:
     Data1: 1236170251
@@ -81,6 +82,19 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 3979
 --- !u!114 &-5256288957761349059
+=======
+  Path: Assets/Sound Banks/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+<<<<<<< HEAD
+  lastModified: 638044705316473424
+=======
+  lastModified: 638044734588330028
+>>>>>>> 10d6bc644ba967b7262cbd5679d8b8dac7dfa36e
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2180323959748132033
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Intro Music
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Path: event:/Intro Music
   Guid:
     Data1: 987222279
@@ -160,6 +175,20 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5625
+=======
+  Path: Assets/Sound Banks/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+<<<<<<< HEAD
+  lastModified: 638044705315043296
+=======
+  lastModified: 638044734584408490
+>>>>>>> 10d6bc644ba967b7262cbd5679d8b8dac7dfa36e
+  FileSizes:
+  - Name: 
+    Value: 1204
+  Exists: 1
+>>>>>>> Stashed changes
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,17 +207,34 @@ MonoBehaviour:
   - {fileID: 1481838425151783808}
   - {fileID: 2683531502134152937}
   EditorEvents:
+<<<<<<< Updated upstream
   - {fileID: -2903479888453003132}
   - {fileID: 7840866352422724010}
   - {fileID: -6428626795599648893}
   - {fileID: -6160876101546071137}
   - {fileID: -3466543705447967252}
+=======
+  - {fileID: 5472417165014951271}
+  - {fileID: 509670056630734945}
+  - {fileID: -1005085611520823742}
+  - {fileID: 2917258066016809982}
+  - {fileID: 3642866017070095767}
+>>>>>>> Stashed changes
   EditorParameters: []
   MasterBanks:
   - {fileID: 8473375333074722098}
   StringsBanks:
+<<<<<<< Updated upstream
   - {fileID: 8498855404378212854}
   cacheTime: 638044743742292233
+=======
+  - {fileID: -844825420256730932}
+<<<<<<< HEAD
+  cacheTime: 638044705316563401
+=======
+  cacheTime: 638044734588828658
+>>>>>>> 10d6bc644ba967b7262cbd5679d8b8dac7dfa36e
+>>>>>>> Stashed changes
   cacheVersion: 131593
 --- !u!114 &1481838425151783808
 MonoBehaviour:
@@ -220,10 +266,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Path: Assets/Sound Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
   lastModified: 638044705316563401
+=======
+  Path: Assets/Sound Banks/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+<<<<<<< HEAD
+  lastModified: 638044705315033297
+=======
+  lastModified: 638044734584368602
+>>>>>>> 10d6bc644ba967b7262cbd5679d8b8dac7dfa36e
+>>>>>>> Stashed changes
   FileSizes: []
   Exists: 1
 --- !u!114 &4219482795321980109
@@ -250,7 +307,65 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+<<<<<<< Updated upstream
 --- !u!114 &7840866352422724010
+=======
+--- !u!114 &2917258066016809982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Intro Music
+  m_EditorClassIdentifier: 
+  Path: event:/Intro Music
+  Guid:
+    Data1: 987222279
+    Data2: 1240459781
+    Data3: 648829072
+    Data4: -1089198554
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5625
+--- !u!114 &3642866017070095767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Music
+  Guid:
+    Data1: -395982687
+    Data2: 1095414498
+    Data3: 386841506
+    Data4: 1771275329
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 101721
+--- !u!114 &5472417165014951271
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,10 +404,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Path: Assets/Sound Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
   lastModified: 638044705315033297
+=======
+  Path: Assets/Sound Banks/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+<<<<<<< HEAD
+  lastModified: 638044705316563401
+=======
+  lastModified: 638044734588828658
+>>>>>>> 10d6bc644ba967b7262cbd5679d8b8dac7dfa36e
+>>>>>>> Stashed changes
   FileSizes: []
   Exists: 1
 --- !u!114 &8498855404378212854
