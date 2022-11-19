@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526980366}
-  m_IndirectSpecularColor: {r: 0.00038479967, g: 0.0005805306, b: 0.0010058256, a: 1}
+  m_IndirectSpecularColor: {r: 0.00038480086, g: 0.00058053207, b: 0.0010058294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -143,6 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vel: 0
   intensity: 0
+  effectiveDeath: 0
+  deathIndicator: {fileID: 1705359413}
   car: {fileID: 6546306499442451191}
   rb: {fileID: 6546306499442451196}
 --- !u!114 &120379552
@@ -164,14 +166,16 @@ MonoBehaviour:
       Data2: 1174962842
       Data3: -666347359
       Data4: 402303673
-    Path: event:/Menu Music
+    Path: event:/Game Music
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: death
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -2122,7 +2126,7 @@ MonoBehaviour:
     Path: event:/SubaruEngine
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -2142,8 +2146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31aa73091c3b73408950545ec5521b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathIndicator: {fileID: 1705359413}
   anim: {fileID: 2040954523}
+  vel: 0
+  effectiveVel: 0
   isDrift: 0
+  effectiveDeath: 0
   effectiveRPM: 0
   DRPM: 0
   minRPM: 0

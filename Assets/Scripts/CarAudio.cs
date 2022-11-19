@@ -8,13 +8,19 @@ public class CarAudio : MonoBehaviour
     //public float pitchfactor; Ahora lo hace FMOD
     Rigidbody rb;
     DriftController dc;
+    public die deathIndicator;
     //SecondOrderDynamics1D dynamicsRPM;
 
     public Animator anim; // No lo toco no se lo que es
 
-    float vel, effectiveVel;
+    public float vel, effectiveVel;
     public bool isDrift;
     float effectiveDrift;
+
+    float gear;
+
+    bool death;
+    public float effectiveDeath;
 
     float animd;
     float b;
@@ -36,6 +42,7 @@ public class CarAudio : MonoBehaviour
         lastVel = 0;
         minRPM = 1800;
         maxRPM = 8000;
+        gear = 1;
         //dynamicsRPM = GetComponent<SecondOrderDynamics1D>();
         //dynamicsRPM.SecondOrderDynamicsConstants(f, z, r, x0);
 
@@ -61,12 +68,75 @@ public class CarAudio : MonoBehaviour
         //carAudio.pitch = vel / pitchfactor;
 
         (effectiveRPM, DRPM) = SecondOrderDynamics1D.EulerMethodStep(effectiveRPM, DRPM, f, z, r, x0, Time.deltaTime, effectiveVel, Dvel);
+        death = deathIndicator.ded;
+        effectiveDeath = death ? 1 : 0;
+
+        if (vel > 0 && vel <= 30) {
+            if (gear == 2)
+            {
+                effectiveRPM = effectiveRPM + 500;
+                gear = 1;
+            }
+        }
+        if (vel > 30 && vel <= 50) {
+            if (gear == 1)
+            {
+                effectiveRPM = effectiveRPM - 500;
+                gear = 2;
+            }
+            if (gear == 3)
+            {
+                effectiveRPM = effectiveRPM + 500;
+                gear = 2;
+            }
+        }
+        if (vel > 50 && vel <= 80) {
+            if (gear == 2)
+            {
+                effectiveRPM = effectiveRPM - 500;
+                gear = 3;
+            }
+            if (gear == 4)
+            {
+                effectiveRPM = effectiveRPM + 500;
+                gear = 3;
+            }
+        }
+        if (vel > 80 && vel <= 110) {
+            if (gear == 3)
+            {
+                effectiveRPM = effectiveRPM - 500;
+                gear = 4;
+            }
+            if (gear == 5)
+            {
+                effectiveRPM = effectiveRPM + 500;
+                gear = 4;
+            }
+        }
+        if (vel > 110)
+        {
+            if (gear == 4)
+            {
+                effectiveRPM = effectiveRPM - 500;
+                gear = 5;
+            }
+            if (gear == 6)
+            {
+                effectiveRPM = effectiveRPM + 500;
+                gear = 5;
+            }
+
+        }
+
+     
+
 
 
         var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.SetParameter("RPM", effectiveRPM);
         emitter.SetParameter("DriftRate", effectiveDrift);
-
+        emitter.SetParameter("death", effectiveDeath);
 
 
 
