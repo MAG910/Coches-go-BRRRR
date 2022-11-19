@@ -21,6 +21,7 @@ public class trigger : MonoBehaviour
 
     public Material materal;
 
+    public die die;
 
 
     private void Start()
@@ -40,6 +41,11 @@ public class trigger : MonoBehaviour
             OnNitro = true;
             Destroy(other.gameObject);            
         }
+        if (other.gameObject.tag==("CanDie"))
+        {
+            die.isDed = true;
+            Debug.Log("a");
+        }
     }
 
     private void Update()
@@ -52,7 +58,8 @@ public class trigger : MonoBehaviour
             car.Nitro = true;
             car.TopSpeed = MaxVelOnNitro;
             NitroEffect.SetActive(true);
-            materal.SetColor("_EmissionColor", Color.red);
+           // materal.color = new Color(88, 255, 174);
+            materal.SetColor("_EmissionColor", new Color(88, 255, 174));
         }
         if (timerd <= 0)
         {
@@ -61,7 +68,8 @@ public class trigger : MonoBehaviour
             car.Nitro = false;
             car.TopSpeed = OrigMaxVelOnNitro;
             NitroEffect.SetActive(false);
-            materal.SetColor("_EmissionColor", Color.white);
+            //materal.color = Color.white;
+            materal.SetColor("_EmissionColor",Color.white );
 
         }
     }

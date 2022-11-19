@@ -11,6 +11,8 @@ public class die : MonoBehaviour
 
     public bool ded;
 
+    public bool isDed;
+
 
     private void Start()
     {
@@ -22,6 +24,14 @@ public class die : MonoBehaviour
 
 
         if (other.gameObject.CompareTag("Player"))
+        {
+            Car.isKinematic = true;
+
+            GameOverMenu.SetActive(true);
+
+            ded = true;
+        }
+        if (isDed)
         {
             Car.isKinematic = true;
 
