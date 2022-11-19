@@ -1612,6 +1612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverMenu: {fileID: 610324888}
   Car: {fileID: 6546306499442451196}
+  ded: 0
 --- !u!65 &1705359414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1948,7 +1949,7 @@ PrefabInstance:
     - target: {fileID: 6546306499185142788, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_RendererIndex
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142788, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
@@ -2073,6 +2074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2040954523}
+  isDrift: 0
   effectiveRPM: 0
   DRPM: 0
   minRPM: 0

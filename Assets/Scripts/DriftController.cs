@@ -133,9 +133,9 @@ public class DriftController : MonoBehaviour {
 
         timedr += Time.deltaTime;
 
-        if(timedr >= 30)
+        if(timedr >= 7)
         {
-            a = a + 10;
+            a = a + 2;
             timedr = 0;
         }
     }

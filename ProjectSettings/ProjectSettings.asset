@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Simulation
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 3c7ca8ec4b489a0448ab01d5fb4cda7f, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_ShowUnitySplashScreen: 1
