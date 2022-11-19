@@ -143,6 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vel: 0
   intensity: 0
+  effectiveDeath: 0
+  deathIndicator: {fileID: 0}
   car: {fileID: 6546306499442451191}
   rb: {fileID: 6546306499442451196}
 --- !u!114 &120379552
@@ -167,7 +169,7 @@ MonoBehaviour:
     Path: event:/Game Music
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -1550,13 +1552,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
-      propertyPath: m_LocalRotation.y
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000000054043845
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.000000001584171
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142788, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
@@ -1590,13 +1617,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9499998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98985416
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14208722
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
+        type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017031802
+      value: -0.000000022603793
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000024448066
+      value: 0.0000000032446297
       objectReference: {fileID: 0}
     - target: {fileID: 6650847366848780967, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
@@ -1644,6 +1696,8 @@ MonoBehaviour:
     Value: 0
   - Name: RPM
     Value: 1811
+  - Name: death
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -1659,8 +1713,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31aa73091c3b73408950545ec5521b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathIndicator: {fileID: 0}
   anim: {fileID: 2040954523}
+  vel: 0
+  effectiveVel: 0
   isDrift: 0
+  effectiveDeath: 0
   effectiveRPM: 0
   DRPM: 0
   minRPM: 0
