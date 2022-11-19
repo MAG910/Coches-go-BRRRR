@@ -70,3 +70,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+UserSettings/Layouts/default-2021.dwlt
+UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+fmod_editor.log
+Assets/Sound Banks/Desktop/Music.bank
+Assets/Sound Banks/Desktop/Master.strings.bank
+Assets/Scenes/Splash.unity
+Assets/Scenes/Menu.unity
+Assets/Scenes/Intro.unity
