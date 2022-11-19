@@ -7,11 +7,15 @@ public class CarAudio : MonoBehaviour
     //public AudioSource carAudio; Ahora lo hace FMOD
     //public float pitchfactor; Ahora lo hace FMOD
     Rigidbody rb;
+    DriftController dc;
     //SecondOrderDynamics1D dynamicsRPM;
 
     public Animator anim; // No lo toco no se lo que es
 
     float vel, effectiveVel;
+    public bool isDrift;
+    float effectiveDrift;
+
     float animd;
     float b;
 
@@ -23,7 +27,8 @@ public class CarAudio : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody>();
+        dc = GetComponent<DriftController>();
         f = 1;
         z = 1;
         r = 1;
@@ -39,6 +44,10 @@ public class CarAudio : MonoBehaviour
 
     void Update()
     {
+
+        isDrift = dc.inSlip;
+        effectiveDrift = isDrift ? 1 : 0;
+
 
         vel = rb.velocity.magnitude;
         effectiveVel = Mathf.Lerp(minRPM,maxRPM, vel > maxRPM ? 1 : 100 * vel / maxRPM);
@@ -56,6 +65,7 @@ public class CarAudio : MonoBehaviour
 
         var emitter = GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.SetParameter("RPM", effectiveRPM);
+        emitter.SetParameter("DriftRate", effectiveDrift);
 
 
 

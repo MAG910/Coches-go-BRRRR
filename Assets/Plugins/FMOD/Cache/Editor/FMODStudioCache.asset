@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8644917168980455192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Game Music/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  StudioPath: 
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 619274992
+    data2: 2592902008
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7641806730040956639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SubaruEngine/DriftRate
+  m_EditorClassIdentifier: 
+  Name: DriftRate
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2686675280
+    data2: 2702240625
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7634458487055562414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +63,10 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638044614613479697
+  lastModified: 638044734588330028
   FileSizes: []
   Exists: 1
---- !u!114 &-4260111690953743679
+--- !u!114 &-2180323959748132033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,20 +76,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Menu Music/Intensity
+  m_Name: parameter:/Game Music/vel
   m_EditorClassIdentifier: 
-  Name: Intensity
+  Name: vel
   StudioPath: 
-  Min: 1
-  Max: 3
-  Default: 1
+  Min: 0
+  Max: 150
+  Default: 0
   ID:
-    data1: 619274992
-    data2: 2592902008
-  Type: 1
+    data1: 1786812939
+    data2: 1924518535
+  Type: 0
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1005085611520823742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Turbo Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Turbo Sound
+  Guid:
+    Data1: 1236170251
+    Data2: 1150260260
+    Data3: -111077228
+    Data4: -1604659533
+  Banks:
+  - {fileID: 7953910825171007620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3979
 --- !u!114 &-844825420256730932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,10 +132,10 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638044614612886363
+  lastModified: 638044734584408490
   FileSizes:
   - Name: 
-    Value: 1038
+    Value: 1204
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -81,14 +156,46 @@ MonoBehaviour:
   - {fileID: -7634458487055562414}
   EditorEvents:
   - {fileID: 5472417165014951271}
-  - {fileID: 6147212935922115176}
+  - {fileID: 509670056630734945}
+  - {fileID: -1005085611520823742}
+  - {fileID: 2917258066016809982}
+  - {fileID: 3642866017070095767}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1431913365850061860}
   StringsBanks:
   - {fileID: -844825420256730932}
-  cacheTime: 638044614613479697
+  cacheTime: 638044734588828658
   cacheVersion: 131593
+--- !u!114 &509670056630734945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Game Music
+  m_EditorClassIdentifier: 
+  Path: event:/Game Music
+  Guid:
+    Data1: 274701035
+    Data2: 1174962842
+    Data3: -666347359
+    Data4: 402303673
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2180323959748132033}
+  - {fileID: -8644917168980455192}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 148965
 --- !u!114 &1431913365850061860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +211,7 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638044614612062519
+  lastModified: 638044734584368602
   FileSizes: []
   Exists: 1
 --- !u!114 &1978425561038443345
@@ -131,6 +238,60 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2917258066016809982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Intro Music
+  m_EditorClassIdentifier: 
+  Path: event:/Intro Music
+  Guid:
+    Data1: 987222279
+    Data2: 1240459781
+    Data3: 648829072
+    Data4: -1089198554
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5625
+--- !u!114 &3642866017070095767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Music
+  Guid:
+    Data1: -395982687
+    Data2: 1095414498
+    Data3: 386841506
+    Data4: 1771275329
+  Banks:
+  - {fileID: -7634458487055562414}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 101721
 --- !u!114 &5472417165014951271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,38 +317,10 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 1978425561038443345}
+  - {fileID: -7641806730040956639}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6147212935922115176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menu Music
-  m_EditorClassIdentifier: 
-  Path: event:/Menu Music
-  Guid:
-    Data1: 274701035
-    Data2: 1174962842
-    Data3: -666347359
-    Data4: 402303673
-  Banks:
-  - {fileID: -7634458487055562414}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 8276169975403580611}
-  - {fileID: -4260111690953743679}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 148965
 --- !u!114 &7953910825171007620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,30 +336,6 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638044614612919247
+  lastModified: 638044734588828658
   FileSizes: []
-  Exists: 1
---- !u!114 &8276169975403580611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Menu Music/vel
-  m_EditorClassIdentifier: 
-  Name: vel
-  StudioPath: 
-  Min: 0
-  Max: 150
-  Default: 0
-  ID:
-    data1: 1786812939
-    data2: 1924518535
-  Type: 0
-  IsGlobal: 0
-  Labels: []
   Exists: 1

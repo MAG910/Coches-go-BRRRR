@@ -77,7 +77,7 @@ public class DriftController : MonoBehaviour {
     bool isStuck = false;
     bool autoReset = false;
     bool inBoost = false;
-    bool inSlip = false;
+    public bool inSlip = false;
 
     Vector3 spawnP;
     Quaternion spawnR;
