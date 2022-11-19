@@ -123,6 +123,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &120379545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6546306499185142812, guid: 03dd59393a663634c94cc3368c550bed,
+    type: 3}
+  m_PrefabInstance: {fileID: 6546306499442451190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &120379551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120379545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa0eb430c704a742af5202da056dee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vel: 0
+  intensity: 0
+  car: {fileID: 6546306499442451191}
+  rb: {fileID: 6546306499442451196}
+--- !u!114 &120379552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120379545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 274701035
+      Data2: 1174962842
+      Data3: -666347359
+      Data4: 402303673
+    Path: event:/Menu Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &136307374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,12 +1475,12 @@ PrefabInstance:
     - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000003064189
+      value: 0.000000005352055
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499028580868, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -8.9819685e-10
+      value: -0.0000000015688313
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142788, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
@@ -1463,12 +1515,12 @@ PrefabInstance:
     - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000019483318
+      value: 0.000000022563178
       objectReference: {fileID: 0}
     - target: {fileID: 6546306499185142808, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000027967055
+      value: -0.0000000032387997
       objectReference: {fileID: 0}
     - target: {fileID: 6650847366848780967, guid: 03dd59393a663634c94cc3368c550bed,
         type: 3}
@@ -1532,6 +1584,12 @@ MonoBehaviour:
   DRPM: 0
   minRPM: 0
   maxRPM: 0
+--- !u!54 &6546306499442451196 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6546306498285248134, guid: 03dd59393a663634c94cc3368c550bed,
+    type: 3}
+  m_PrefabInstance: {fileID: 6546306499442451190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7368807971969929219
 PrefabInstance:
   m_ObjectHideFlags: 0
