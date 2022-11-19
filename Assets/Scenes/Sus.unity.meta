@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fileFormatVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,3 +14,12 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 5916108046cf95e42b9a865bfa3159b9
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> 9568cb727dc5ffbf58fdb2be015342f3e91ebf4b

@@ -66,7 +66,11 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
+<<<<<<< HEAD
   lastModified: 638044734588330028
+=======
+  lastModified: 638044743581980259
+>>>>>>> 9568cb727dc5ffbf58fdb2be015342f3e91ebf4b
   FileSizes: []
   Exists: 1
 --- !u!114 &-2180323959748132033
@@ -139,7 +143,11 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 638044734584408490
+=======
+  lastModified: 638044743581369736
+>>>>>>> 9568cb727dc5ffbf58fdb2be015342f3e91ebf4b
   FileSizes:
   - Name: 
     Value: 1204
@@ -172,7 +180,11 @@ MonoBehaviour:
   - {fileID: 1431913365850061860}
   StringsBanks:
   - {fileID: -844825420256730932}
+<<<<<<< HEAD
   cacheTime: 638044734588828658
+=======
+  cacheTime: 638044743581980259
+>>>>>>> 9568cb727dc5ffbf58fdb2be015342f3e91ebf4b
   cacheVersion: 131593
 --- !u!114 &509670056630734945
 >>>>>>> 1bf3889eaf2e92ea8f1d3571061e8b441118aa3c
@@ -247,6 +259,7 @@ MonoBehaviour:
   Path: Assets/Sound Banks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 638044734584368602
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,6 +271,9 @@ MonoBehaviour:
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
+=======
+  lastModified: 638044614612062519
+>>>>>>> 9568cb727dc5ffbf58fdb2be015342f3e91ebf4b
   FileSizes: []
   Exists: 1
 --- !u!114 &-2180323959748132033
@@ -289,6 +305,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &-3466543705447967252
 =======
 =======
@@ -297,6 +314,8 @@ MonoBehaviour:
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
 =======
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
+=======
+>>>>>>> 9568cb727dc5ffbf58fdb2be015342f3e91ebf4b
 --- !u!114 &2917258066016809982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +527,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 638044705316563401
 =======
   Path: Assets/Sound Banks/Desktop/Master.bank
@@ -531,6 +551,9 @@ MonoBehaviour:
 =======
   lastModified: 638044734588828658
 >>>>>>> 9f9832784973f81ea3f3f21bffa89fb39639313e
+=======
+  lastModified: 638044743581479731
+>>>>>>> 9568cb727dc5ffbf58fdb2be015342f3e91ebf4b
   FileSizes: []
   Exists: 1
 --- !u!114 &4219482795321980109
