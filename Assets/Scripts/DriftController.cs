@@ -86,6 +86,7 @@ public class DriftController : MonoBehaviour {
     Vector3 pvel = new Vector3(0f, 0f, 0f);
     #endregion
 
+    float timedr;
 
 
     // Use this for initialization
@@ -119,7 +120,7 @@ public class DriftController : MonoBehaviour {
         
         if (Input.GetButton("Brake") && !Nitro)
         {
-            Accel = 10;
+            Accel = a - 30;
         }else if (!Input.GetButton("Brake") && Nitro)
         {
             Accel = a + 30;
@@ -127,6 +128,15 @@ public class DriftController : MonoBehaviour {
         else
         {
             Accel = a;
+        }
+
+
+        timedr += Time.deltaTime;
+
+        if(timedr >= 30)
+        {
+            a = a + 10;
+            timedr = 0;
         }
     }
 

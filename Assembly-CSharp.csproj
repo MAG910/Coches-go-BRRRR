@@ -61,6 +61,8 @@
     <Compile Include="Assets\Scripts\shadow.cs" />
     <Compile Include="Assets\Scripts\trigger.cs" />
     <Compile Include="Assets\Scripts\fisicas.cs" />
+    <Compile Include="Assets\Scripts\copyPos.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\rbf.cs" />
     <Compile Include="Assets\Scripts\limitFPS.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
@@ -68,15 +70,13 @@
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\ChangeSceneOnEnterOrSecs.cs" />
+    <Compile Include="Assets\Scripts\die.cs" />
     <Compile Include="Assets\Scripts\SeleccionarTrozo.cs" />
     <Compile Include="Assets\Scripts\ParticleController.cs" />
     <Compile Include="Assets\Scripts\SecondOrderDynamics1D.cs" />
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
     <Compile Include="Assets\Scripts\CarAudio.cs" />
-    <Compile Include="Assets\Scripts\copyPos.cs" />
-    <Compile Include="Assets\Scripts\die.cs" />
-    <Compile Include="Assets\Scripts\MenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
