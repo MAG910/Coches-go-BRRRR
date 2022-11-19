@@ -9,11 +9,11 @@ public class CarAudio : MonoBehaviour
     Rigidbody rb;
     //SecondOrderDynamics1D dynamicsRPM;
 
-    //public Animator anim; // No lo toco no se lo que es
+    public Animator anim; // No lo toco no se lo que es
 
     float vel, effectiveVel;
-    //float animd;
-    //float b;
+    float animd;
+    float b;
 
     float Dvel, lastVel;
     float f, z, r, x0; //Variables para SecondOrderDynamics1D
@@ -63,22 +63,22 @@ public class CarAudio : MonoBehaviour
 
 
         //Código antiguo no se que hace así que no lo he tocado
-        //float input = Input.GetAxis("Sideways");
-        //float a;
-        //if(input > 0)
-        //{
-        //    a = 0;
-        //}
-        //else if (input < 0)
-        //{
-        //    a = 1;
-        //}
-        //else
-        //{
-        //    a = 0.5f;
-        //}
-        //b = Mathf.Lerp(b, a, 10 * Time.deltaTime);
-        //anim.SetFloat("Blend", b);
+        float input = Input.GetAxis("Sideways");
+        float a;
+        if (input > 0)
+        {
+            a = 0;
+        }
+        else if (input < 0)
+        {
+            a = 1;
+        }
+        else
+        {
+            a = 0.5f;
+        }
+        b = Mathf.Lerp(b, a, 10 * Time.deltaTime);
+        anim.SetFloat("Blend", b);
 
 
     }
