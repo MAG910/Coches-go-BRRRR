@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\MusicIntensity.cs" />
     <Compile Include="Assets\Scripts\trozoCarreteraTrigger.cs" />
     <Compile Include="Assets\Scripts\shadow.cs" />
+    <Compile Include="Assets\Pause.cs" />
     <Compile Include="Assets\Scripts\trigger.cs" />
     <Compile Include="Assets\Scripts\fisicas.cs" />
     <Compile Include="Assets\Scripts\copyPos.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
     <Compile Include="Assets\Scripts\CarAudio.cs" />
-    <Compile Include="Assets\Pause.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

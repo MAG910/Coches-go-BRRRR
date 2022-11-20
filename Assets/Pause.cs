@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     public GameObject Menu;
-    bool enabledd = false;
+    public bool enabledd = false;
+
+    private void Start()
+    {
+        Menu.SetActive(false);
+        enabledd = false;
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape) && !enabledd)
@@ -14,12 +20,15 @@ public class Pause : MonoBehaviour
             enabledd = true;
             Menu.SetActive(true);
             Time.timeScale = 0;
+            return;
+            Debug.Log("a");
         }
         if (Input.GetKeyDown(KeyCode.Escape) && enabledd)
         {
             enabledd = false;
             Menu.SetActive(false);
             Time.timeScale = 1;
+            return;
         }
     }
 
