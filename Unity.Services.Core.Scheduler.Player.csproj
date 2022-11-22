@@ -56,13 +56,13 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\ScheduledInvocation.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\TimeProvider\ITimeProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\ActionScheduler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\TimeProvider\UtcTimeProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\MinimumBinaryHeap.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\ScheduledInvocationComparer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\ScheduledInvocation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\TimeProvider\ITimeProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\TimeProvider\UtcTimeProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\MinimumBinaryHeap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Scheduler\Unity.Services.Core.Scheduler.asmdef" />
@@ -272,14 +272,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>

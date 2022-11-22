@@ -57,17 +57,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\UnityProjectNotLinkedException.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\ServicesInitializationException.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\ExternalUserIdProperty.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\UnityServices.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\CommonErrorCodes.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\DynamicDependency\PreserveDependencyAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\RequestFailedException.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\ServicesInitializationState.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Utils\UnityThreadUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\ServicesInitializationException.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\ExternalUserIdProperty.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\IUnityServices.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\UnityServices.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\CommonErrorCodes.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Initialization\InitializationOptions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Core\Unity.Services.Core.asmdef" />
@@ -277,14 +277,14 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>

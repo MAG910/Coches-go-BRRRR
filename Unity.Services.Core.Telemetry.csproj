@@ -56,40 +56,40 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Cache\DisabledCachePersister.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Handlers\DiagnosticsHandler.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Interfaces\ITelemetryPayload.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\CachedPayload.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Metrics\MetricsFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Metrics\DisabledMetrics.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Utils\FactoryUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Interfaces\ITelemetryEvent.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Metrics\MetricsPayload.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Diagnotstics\DiagnosticsFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Networking\UnityWebRequestSender.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Utils\CacheExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Metrics\Metrics.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Diagnostics\Diagnostic.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Networking\ExponentialBackOffRetryPolicy.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Diagnotstics\Diagnostics.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Metrics\Metric.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Cache\FileCachePersister.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\TelemetryConfig.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Networking\TelemetrySender.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Diagnotstics\DisabledDiagnosticsFactory.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Handlers\TelemetryHandler.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Diagnostics\DiagnosticsPayload.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Metrics\DisabledMetricsFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Utils\TagKeys.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Metrics\MetricType.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Cache\ICachePersister.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Networking\WebRequest.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Diagnotstics\DisabledDiagnostics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Handlers\MetricsHandler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Cache\DisabledCachePersister.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Interfaces\ITelemetryPayload.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Interfaces\ITelemetryEvent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Metrics\MetricsPayload.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Utils\CacheExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Metrics\Metrics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Models\Diagnostics\Diagnostic.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Networking\ExponentialBackOffRetryPolicy.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Cache\FileCachePersister.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\TelemetryConfig.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Networking\TelemetrySender.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Diagnotstics\DisabledDiagnosticsFactory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Handlers\TelemetryHandler.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Networking\IUnityWebRequestSender.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Utils\TelemetryUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Diagnotstics\DisabledDiagnostics.cs" />
     <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Utils\TelemetryConfigKeys.cs" />
-    <Compile Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Handlers\MetricsHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.services.core@1.5.2\Runtime\Telemetry\Unity.Services.Core.Telemetry.asmdef" />
@@ -350,14 +350,8 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.13f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
@@ -365,14 +359,20 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
