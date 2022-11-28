@@ -1,3 +1,4 @@
+using FMOD;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,18 +21,23 @@ public class trigger : MonoBehaviour
     public bool OnNitro;
 
     public Material materal;
+    
+    public Color colorbase;
+    public Color colorturbo;
 
-    public die die;
+
 
 
     private void Start()
     {
+     
+        materal.SetColor("_EmissionColor", colorbase);
+
         timerd = TimeOnNitro;
 
         OrigMaxVelOnNitro = car.Accel;
         OrigMaxVelOnNitro = car.TopSpeed;
 
-        materal.SetColor("_EmissionColor", Color.white);
 
     }
     private void OnTriggerEnter(Collider other)
@@ -43,7 +49,7 @@ public class trigger : MonoBehaviour
         }
         if (other.gameObject.tag == "CanDie")
         {
-            die.isDed = true;
+            other.GetComponent<die>().isDed = true;
         }
     }
 
@@ -57,8 +63,9 @@ public class trigger : MonoBehaviour
             car.Nitro = true;
             car.TopSpeed = MaxVelOnNitro;
             NitroEffect.SetActive(true);
-           // materal.color = new Color(88, 255, 174);
-            materal.SetColor("_EmissionColor", new Color(88, 255, 174));
+
+            materal.SetColor("_EmissionColor", colorturbo);
+
         }
         if (timerd <= 0)
         {
@@ -67,8 +74,9 @@ public class trigger : MonoBehaviour
             car.Nitro = false;
             car.TopSpeed = OrigMaxVelOnNitro;
             NitroEffect.SetActive(false);
-            //materal.color = Color.white;
-            materal.SetColor("_EmissionColor",Color.white );
+
+           
+            materal.SetColor("_EmissionColor",  colorbase);
 
         }
     }

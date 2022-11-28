@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4154196875742068296}
   - component: {fileID: 2180405524123896450}
   - component: {fileID: 685619048164546052}
+  - component: {fileID: 2575084799051500262}
   m_Layer: 0
   m_Name: Obstacilo
   m_TagString: CanDie
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.015219867, y: 0.046706576, z: 0.027647313}
   m_Center: {x: -0.00037446804, y: 0, z: 0.0138295125}
+--- !u!114 &2575084799051500262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379049167631936343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99d1d6e031ce4a4c8993eb632ad6807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverMenu: {fileID: 0}
+  Car: {fileID: 0}
+  ded: 0
+  isDed: 0

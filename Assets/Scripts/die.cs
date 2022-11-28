@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class die : MonoBehaviour
 {
-    public GameObject GameOverMenu;
-    
+    GameObject UI;
 
-    public Rigidbody Car;
 
     public bool ded;
 
@@ -16,6 +14,8 @@ public class die : MonoBehaviour
 
     private void Start()
     {
+        UI = GameObject.Find("UI");
+
         ded = false;
         isDed = false;
     }
@@ -26,26 +26,13 @@ public class die : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            Car.isKinematic = true;
-
-            GameOverMenu.SetActive(true);
-
             ded = true;
+            UI.GetComponent<UIS>().GameO();
+
+
         }
-       
 
 
-    }
 
-    private void Update()
-    {
-        if (isDed)
-        {
-            Car.isKinematic = true;
-
-            GameOverMenu.SetActive(true);
-
-            ded = true;
-        }
     }
 }

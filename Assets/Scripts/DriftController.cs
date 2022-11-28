@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Scripting.APIUpdating;
 
 // Global enum
 public enum Faction {
@@ -9,13 +12,21 @@ public enum Faction {
     Neutral
 };
 
-public class DriftController : MonoBehaviour {
+public class DriftController : MonoBehaviour
+{
+    public UIS UIS;
+    public bool canPause;
 
     #region Parameters
     public float Accel = 15.0f;
     public bool Nitro;
+    Controls Controles;
+    float restart;
+    private float startb;
+    private bool paused;
 
-    public float Boost = 4f/3;          // In ratio
+
+    //public float Boost = 4f/3;          // In ratio
     public float TopSpeed = 30.0f;      // In meters/second
     //public float Jump = 3.0f;           // In meters/second2
     public float GripX = 12.0f;          // In meters/second2
@@ -25,9 +36,9 @@ public class DriftController : MonoBehaviour {
 
     // Center of mass, fraction of collider boundaries (= half of size)
     // 0 = center, and +/-1 = edge in the pos/neg direction.
-    public Vector3 CoM = new Vector3 (0f, .5f, 0f);
-                                                
-    
+    public Vector3 CoM = new Vector3(0f, .5f, 0f);
+
+
     public Faction carFaction = Faction.Player;  // Drop-down to select faction of this object
     public Transform Target;            // Target for the AI to act upon
 
@@ -65,6 +76,9 @@ public class DriftController : MonoBehaviour {
     // For determining drag direction
     float isRight = 1.0f;
     float isForward = 1.0f;
+    float move;
+    float breake;
+
 
     bool isRotating = false;
     bool isGrounded = true;
@@ -76,27 +90,37 @@ public class DriftController : MonoBehaviour {
     bool inReset = false;
     bool isStuck = false;
     bool autoReset = false;
-    bool inBoost = false;
+    public Animator anim;
+    //bool inBoost = false;
     public bool inSlip = false;
 
     Vector3 spawnP;
     Quaternion spawnR;
-    
+
     Vector3 vel = new Vector3(0f, 0f, 0f);
     Vector3 pvel = new Vector3(0f, 0f, 0f);
     #endregion
 
     float timedr;
 
-
+    private void Awake()
+    {
+        Controles = new Controls();
+    }
     // Use this for initialization
-    void Start () {
-		rigidBody = GetComponent<Rigidbody>();
+    void Start()
+    {
 
+        /*Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;*/
+        rigidBody = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
+
+        OnEnable();
         // Store start location & rotation
         spawnP = transform.position;
         spawnR = transform.rotation;
-        
+
         groupCollider = GetBounds(gameObject);     // Get the full collider boundary of group
         distToGround = groupCollider.extents.y;    // Pivot to the outermost collider
 
@@ -108,20 +132,24 @@ public class DriftController : MonoBehaviour {
     }
 
     // Called once per frame
-    void Update() {
-        Debug.DrawRay(transform.position, rigidBody.velocity / 2, Color.green);
-        
+    void Update()
+    {
+        //Debug.DrawRay(transform.position, rigidBody.velocity / 2, Color.green);
+
         // Reset to spawn if out of bounds
-        if (transform.position.y < -10) {
+        /*if (transform.position.y < -10) {
             transform.position = spawnP;
             transform.rotation = spawnR;
             inReset = true;
-        }
-        
-        if (Input.GetButton("Brake") && !Nitro)
+        }*/
+
+
+
+        if (breake > 0 && !Nitro)
         {
-            Accel = a - 30;
-        }else if (!Input.GetButton("Brake") && Nitro)
+            Accel = a - 30 * breake;
+        }
+        else if (breake <= 0 && Nitro)
         {
             Accel = a + 30;
         }
@@ -133,16 +161,44 @@ public class DriftController : MonoBehaviour {
 
         timedr += Time.deltaTime;
 
-        if(timedr >= 7)
+        if (timedr >= 7)
         {
             a = a + 2;
             timedr = 0;
         }
-    }
 
+
+        if (transform.InverseTransformDirection(rigidBody.velocity).x > 1f)
+        {
+            anim.SetFloat("Blend", Mathf.Lerp(anim.GetFloat("Blend"), 0, Time.deltaTime * 10));
+        }
+        else if (transform.InverseTransformDirection(rigidBody.velocity).x < -1f)
+        {
+            anim.SetFloat("Blend", Mathf.Lerp(anim.GetFloat("Blend"), 1, Time.deltaTime * 10));
+        }
+        else
+        {
+            anim.SetFloat("Blend", Mathf.Lerp(anim.GetFloat("Blend"), 0.5f, Time.deltaTime));
+        }
+    }
+    private void OnEnable()
+    {
+        Controles.P1.Enable();
+    }
+    private void OnDisable()
+    {
+        Controles.P1.Disable();
+    }
     // Called once multiple times per frame 
     // (according to physics setting)
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
+        move = Controles.P1.Sideways.ReadValue<float>();
+        restart = Controles.P1.Reset.ReadValue<float>();
+        breake = Controles.P1.Break.ReadValue<float>();
+        startb = Controles.P1.Start.ReadValue<float>();
+
+
         #region Situational Checks
         accel = Accel;
         rotate = Rotate;
@@ -161,37 +217,46 @@ public class DriftController : MonoBehaviour {
 
         // A short raycast to check below
         isGrounded = Physics.Raycast(transform.position, -transform.up, distToGround + 0.1f);
-        if (!isGrounded) {
+        if (!isGrounded)
+        {
             rotate = 0f;
             accel = 0f;
             gripX = 0f;
             gripZ = 0f;
             rigidBody.angularDrag = AngDragA;
         }
+       
 
         // Prevent the rotational input intervenes with physics angular velocity 
         isStumbling = rigidBody.angularVelocity.magnitude > 0.1f * Rotate * Time.deltaTime;
-        if (isStumbling) {
+        if (isStumbling)
+        {
             //rotate = 0f;
         }
 
         // Start turning only if there's velocity
-        if (pvel.magnitude < MinRotSpd) {
+        if (pvel.magnitude < MinRotSpd)
+        {
             rotate = 0f;
-        } else {
+        }
+        else
+        {
             rotate = pvel.magnitude / MaxRotSpd * rotate;
         }
 
         if (rotate > Rotate) rotate = Rotate;
 
         // Calculate grip based on sideway velocity in hysteresis curve
-        if (!inSlip) {
+        if (!inSlip)
+        {
             // Normal => slip
-            slip = this.SlipL.Evaluate(Mathf.Abs(pvel.x)/SlipMod);
+            slip = this.SlipL.Evaluate(Mathf.Abs(pvel.x) / SlipMod);
             if (slip == 1f) inSlip = true;
-        } else {
+        }
+        else
+        {
             // Slip => Normal
-            slip = this.SlipU.Evaluate(Mathf.Abs(pvel.x)/SlipMod);
+            slip = this.SlipU.Evaluate(Mathf.Abs(pvel.x) / SlipMod);
             if (slip == 0f) inSlip = false;
         }
 
@@ -215,7 +280,8 @@ public class DriftController : MonoBehaviour {
 
         #region Logics
         // Get command from keyboard or simple AI (conditional rulesets)
-        switch (carFaction) {
+        switch (carFaction)
+        {
             case Faction.Player:
                 InputKeyboard();
                 break;
@@ -242,7 +308,8 @@ public class DriftController : MonoBehaviour {
 
         // Rotate the velocity vector
         // vel = pvel => Transfer all (full grip)
-        if (isRotating) {
+        if (isRotating)
+        {
             vel = vel * (1 - rotVel) + pvel * rotVel; // Partial transfer
             //vel = vel.normalized * speed;
         }
@@ -270,18 +337,22 @@ public class DriftController : MonoBehaviour {
 
     #region Controllers
     // Get input values from keyboard
-    void InputKeyboard() {
-        inBoost = Input.GetAxisRaw("Boost") > 0f;
-        inTurn = Input.GetAxisRaw("Sideways");
+    void InputKeyboard()
+    {
+        //inBoost = Input.GetAxisRaw("Boost") > 0f;
+        inTurn = move;
         inThrottle = 1;
 
-       
+        if (restart > 0 || inReset)
+        {
+            inReset = true;
+        }
 
-        // Reset will turn false after the respawn is successful
-        inReset = inReset || Input.GetKeyDown(KeyCode.R);
+
     }
 
-    void InputEnemy() {
+    void InputEnemy()
+    {
         inThrottle = 1f;
 
         // Turn by facing player
@@ -298,26 +369,33 @@ public class DriftController : MonoBehaviour {
     }
 
     // Executing the queued inputs
-    void Controller() {
+    void Controller()
+    {
 
-        if (inBoost) accel *= Boost; // Higher acceleration
+        //if (inBoost) accel *= Boost; // Higher acceleration
 
-        if (inThrottle > 0.5f || inThrottle < -0.5f) {
+        if (inThrottle > 0.5f || inThrottle < -0.5f)
+        {
             rigidBody.velocity += transform.forward * inThrottle * accel * Time.deltaTime;
             gripZ = 0f;     // Remove straight grip if wheel is rotating
         }
 
-        if (autoReset) {
+        if (autoReset)
+        {
             // If stuck, check next frame too then reset
-            if (pvel.magnitude <= 0.01f) {
+            if (pvel.magnitude <= 0.01f)
+            {
                 inReset = isStuck;  // So, true on next frame
                 isStuck = true;
-            } else {
+            }
+            else
+            {
                 isStuck = false;
             }
         }
 
-        if (inReset) {  // Reset
+        if (inReset)
+        {  // Reset
             float y = transform.eulerAngles.y;
             transform.eulerAngles = new Vector3(0, y, 0);
             rigidBody.velocity = new Vector3(0, -1f, 0);
@@ -331,7 +409,8 @@ public class DriftController : MonoBehaviour {
         pvel = transform.InverseTransformDirection(rigidBody.velocity);
 
         // Turn statically
-        if (inTurn > 0.5f || inTurn < -0.5f) {
+        if (inTurn > 0.1f || inTurn < -0.1f)
+        {
             float dir = (pvel.z < 0) ? -1 : 1;    // To fix direction on reverse
             RotateGradConst(inTurn * dir);
         }
@@ -353,78 +432,34 @@ public class DriftController : MonoBehaviour {
 
     Vector3 drot = new Vector3(0f, 0f, 0f);
 
-    void RotateInstant(float angle) {
-        if (rotate > 0f) {
-            Vector3 rot = transform.eulerAngles;
-            rot.y = angle;
-            transform.eulerAngles = rot;
-            isRotating = true;
-        }
-    }
 
-    void RotateGradConst(float isCW) {
+    void RotateGradConst(float isCW)
+    {
         // Delta = right(taget) - left(current)
         drot.y = isCW * rotate * Time.deltaTime;
         transform.rotation *= Quaternion.AngleAxis(drot.y, transform.up);
         isRotating = true;
     }
 
-    void RotateGradAbsolute(float angle) {
-        // Delta = right(taget) - left(current)
-        Vector3 rot = transform.eulerAngles;
-        rot.y = AngleOffset(rot.y, 0f);
 
-        float delta = Mathf.DeltaAngle(rot.y, angle);
-        float isCW = delta > 0f ? 1f : -1f;
-        rot.y += isCW * rotate * Time.deltaTime;
-        rot.y = AngleOffset(rot.y, 0f);
-
-        delta = Mathf.DeltaAngle(AngleOffset(rot.y, 0f), angle);
-        if (delta * isCW < 0f) rot.y = angle;       // Check if changed polarity
-        else isRotating = true;
-
-        // You can't set them directly as it'll set x & z to zero
-        // if you're not using eulerAngles.x & z.
-        transform.eulerAngles = rot;
-        //transform.rotation = Quaternion.AngleAxis(rot.y, Vector3.up);
-        //rigidBody.MoveRotation(Quaternion.Euler(rot));
-    }
-
-    void RotateGradRelative(float angle) {
-        // Delta = right(taget) - left(current)
-        Vector3 rot = transform.eulerAngles;
-        rot.y = AngleOffset(rot.y, 0f);
-
-        float delta = Mathf.DeltaAngle(rot.y, angle);
-        float isCW = delta > 0f ? 1f : -1f;
-
-        // Value add to transform.eulerAngles
-        drot.y = isCW * rotate * Time.deltaTime;
-        drot.y = AngleOffset(rot.y, 0f);
-
-        delta = Mathf.DeltaAngle(AngleOffset(rot.y, drot.y), angle);
-        if (delta * isCW < 0f) drot.y = 0;       // Check if changed polarity
-        else isRotating = true;
-
-        // Add the drot to current rotation
-        transform.rotation *= Quaternion.AngleAxis(drot.y, transform.up);
-    
-    }
     #endregion
 
 
 
     #region Utilities
-    void DebugPlayer(object message) {
-        if (carFaction == Faction.Player) Debug.Log(message);
+    void DebugPlayer(object message)
+    {
+        //if (carFaction == Faction.Player) Debug.Log(message);
     }
 
-    float Angle2Points(Vector3 a, Vector3 b) {
+    float Angle2Points(Vector3 a, Vector3 b)
+    {
         //return Mathf.Atan2(b.y - a.y, b.x - a.x) * Mathf.Rad2Deg;
         return Mathf.Atan2(b.x - a.x, b.z - a.z) * Mathf.Rad2Deg;
     }
 
-    float AngleOffset(float raw, float offset) {
+    float AngleOffset(float raw, float offset)
+    {
         raw = (raw + offset) % 360;             // Mod by 360, to not exceed 360
         if (raw > 180.0f) raw -= 360.0f;
         if (raw < -180.0f) raw += 360.0f;
@@ -432,26 +467,32 @@ public class DriftController : MonoBehaviour {
     }
 
     // Get bound of a large 
-    public static Bounds GetBounds(GameObject obj) {
+    public static Bounds GetBounds(GameObject obj)
+    {
 
         // Switch every collider to renderer for more accurate result
         Bounds bounds = new Bounds();
         Collider[] colliders = obj.GetComponentsInChildren<Collider>();
 
-        if (colliders.Length > 0) {
+        if (colliders.Length > 0)
+        {
 
             //Find first enabled renderer to start encapsulate from it
-            foreach (Collider collider in colliders) {
+            foreach (Collider collider in colliders)
+            {
 
-                if (collider.enabled) {
+                if (collider.enabled)
+                {
                     bounds = collider.bounds;
                     break;
                 }
             }
 
             //Encapsulate (grow bounds to include another) for all collider
-            foreach (Collider collider in colliders) {
-                if (collider.enabled) {
+            foreach (Collider collider in colliders)
+            {
+                if (collider.enabled)
+                {
                     bounds.Encapsulate(collider.bounds);
                 }
             }
@@ -459,4 +500,12 @@ public class DriftController : MonoBehaviour {
         return bounds;
     }
     #endregion
+
+   
+    IEnumerator pausa()
+    {
+        yield return new WaitForSeconds(1);
+     
+
+    }
 }

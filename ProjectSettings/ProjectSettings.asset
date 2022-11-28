@@ -132,10 +132,10 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   m_SupportedAspectRatios:
     4:3: 1
-    5:4: 1
-    16:10: 1
-    16:9: 1
-    Others: 1
+    5:4: 0
+    16:10: 0
+    16:9: 0
+    Others: 0
   bundleVersion: Alfa 1
   preloadedAssets: []
   metroInputSource: 0
@@ -811,7 +811,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 9765186d-5922-4c72-8d7a-2bb593d07e38
   framebufferDepthMemorylessMode: 0

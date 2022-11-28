@@ -14,19 +14,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Splash.unity
     guid: 7807e01fcc9e1bb4f8cf38b55edf8291
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sus.unity
     guid: 5916108046cf95e42b9a865bfa3159b9
-  - enabled: 1
-    path: Assets/Scenes/Gerard.unity
-    guid: 32c176ff1a1e4ef47a6d6b56df790785
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 449df2794b046c147995c0dabef1792f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Med.unity
     guid: 98132dafdad39744899e70bfa135fadd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Easy.unity
     guid: cda7d585c4971bf43bdd4ac276fb7385
+  - enabled: 1
+    path: Assets/Scenes/NewEasy.unity
+    guid: 78105c9428185c741bdc4a9d023d5806
   m_configObjects: {}
