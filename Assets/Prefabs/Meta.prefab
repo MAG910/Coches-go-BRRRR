@@ -106,7 +106,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Generador: {fileID: 0}
+  Manager: {fileID: 0}
+  text: {fileID: 0}
+  lastlap: 0
+  besttime: 0
+  laptime: 0
   blok: {fileID: 657471147951678123}
+  hasStartedLap: 0
 --- !u!1 &4800126672979570080
 GameObject:
   m_ObjectHideFlags: 0

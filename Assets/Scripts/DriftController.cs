@@ -106,6 +106,8 @@ public class DriftController : MonoBehaviour
     private void Awake()
     {
         Controles = new Controls();
+        Controles.P1.Enable();
+        Controles.UI.Disable();
     }
     // Use this for initialization
     void Start()

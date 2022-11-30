@@ -40,21 +40,22 @@ public class Animation : MonoBehaviour
     {
 
 
-        while (countdown >=0)
+        while (countdown >0)
         {
             contador.GetComponent<TextMeshProUGUI>().text = countdown.ToString();
-            
+            yield return new WaitForSecondsRealtime(1f);
+            countdown--;
             if (countdown == 0)
             {
                 contador.GetComponent<TextMeshProUGUI>().text = "0";
 
              
             }
-            countdown--;
-            yield return new WaitForSecondsRealtime(1f);
+          
+            
             
         }
-        if (countdown == -1)
+        if (countdown == 0)
         {
             
             rb.constraints = RigidbodyConstraints.None;

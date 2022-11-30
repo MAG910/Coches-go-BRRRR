@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Build;
+
 using UnityEngine;
 
 public class Meta : MonoBehaviour
@@ -9,10 +9,12 @@ public class Meta : MonoBehaviour
     public GameObject Generador;
     public GameObject Manager;
     public GameObject text;
-    public float lastlap = 1234;
+
+    public float lastlap = 0;
+    public float besttime = 0;
     public float  laptime;
     public GameObject blok;
-    bool hasStartedLap = false;
+    public bool hasStartedLap = false;
     float startTime;
 
     private void OnTriggerEnter(Collider other)
@@ -22,8 +24,13 @@ public class Meta : MonoBehaviour
             if (hasStartedLap)
             {
                
-                if (laptime < lastlap) { lastlap = laptime; }
-                Manager.GetComponent<Save>().Guardar(lastlap);
+               
+                 lastlap = laptime; 
+                if(besttime> lastlap||besttime==0) {
+                    besttime = lastlap;
+                    Manager.GetComponent<Save>().Guardar(besttime);
+                }
+               
             }
 
             startTime = Time.time;
@@ -47,7 +54,7 @@ public class Meta : MonoBehaviour
     {
         if (hasStartedLap) {
             laptime = Time.time - startTime;
-            text.GetComponent<TextMeshProUGUI>().text=Mathf.FloorToInt(laptime/60) + " : " + Mathf.FloorToInt(laptime%60) ;
+            text.GetComponent<TextMeshProUGUI>().text = Mathf.FloorToInt(laptime / 60) + " : " + (Mathf.Floor(laptime % 60) + ((laptime - (int)laptime).ToString(".000")));
 
         }
     }
@@ -57,6 +64,7 @@ public class Meta : MonoBehaviour
         {
             hasStartedLap = true;
             startTime = Time.time;
+            text.SetActive(true);
         }
 
     }

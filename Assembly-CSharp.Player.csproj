@@ -60,12 +60,14 @@
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\ObstaculosGen.cs" />
     <Compile Include="Assets\Scripts\trigger.cs" />
+    <Compile Include="Assets\Scripts\Save.cs" />
     <Compile Include="Assets\Scripts\copyPos.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Animation.cs" />
     <Compile Include="Assets\Scripts\Meta.cs" />
     <Compile Include="Assets\Scripts\limitFPS.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Scores.cs" />
     <Compile Include="Assets\Scripts\susMusicIntensity.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\ChangeSceneOnEnterOrSecs.cs" />
@@ -79,8 +81,6 @@
     <Compile Include="Assets\Scripts\Wheel.cs" />
     <Compile Include="Assets\Scripts\DriftController.cs" />
     <Compile Include="Assets\Scripts\CarAudio.cs" />
-    <Compile Include="Assets\Scripts\Save.cs" />
-    <Compile Include="Assets\Scripts\Scores.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

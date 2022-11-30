@@ -9,8 +9,9 @@ public class Save : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
+
 
     // Update is called once per frame
     public void Guardar(float time)
@@ -18,35 +19,35 @@ public class Save : MonoBehaviour
         switch (SceneManager.GetActiveScene().buildIndex)
         {
             case 3:
-                if (PlayerPrefs.GetFloat("EasyHS") > time)
+                if (PlayerPrefs.GetFloat("EasyHS") > time|| PlayerPrefs.GetFloat("EasyHS")==0)
                 {
                     PlayerPrefs.SetFloat("EasyHS", time);
                 }
                 break;
 
             case 4:
-                if (PlayerPrefs.GetFloat("MidHS") > time)
+                if (PlayerPrefs.GetFloat("MidHS") > time||PlayerPrefs.GetFloat("MidHS")==0)
                 {
                     PlayerPrefs.SetFloat("MidHS", time);
                 }
                 break;
 
             case 5:
-                if (PlayerPrefs.GetFloat("HighHS") > time)
+                if (PlayerPrefs.GetFloat("HighHS") > time || PlayerPrefs.GetFloat("HighHS") == 0)
                 {
                     PlayerPrefs.SetFloat("HighHS", time);
                 }
                 break;
 
             case 6:
-                if (PlayerPrefs.GetFloat("TubeyHS") > time)
+                if (PlayerPrefs.GetFloat("TubeyHS") > time || PlayerPrefs.GetFloat("TubeyHS") == 0)
                 {
                     PlayerPrefs.SetFloat("TubeHS", time);
                 }
                 break;
 
             case 7:
-                 if (PlayerPrefs.GetFloat("InCHS") > time)
+                 if (PlayerPrefs.GetFloat("InCHS") > time || PlayerPrefs.GetFloat("InCHS") == 0)
                 {
                     PlayerPrefs.SetFloat("InCHS", time);
                 }
@@ -54,7 +55,7 @@ public class Save : MonoBehaviour
                 break;
 
             case 8:
-                if (PlayerPrefs.GetFloat("InTHS") > time)
+                if (PlayerPrefs.GetFloat("InTHS") > time || PlayerPrefs.GetFloat("InTHS") == 0)
                 {
                     PlayerPrefs.SetFloat("InTHS", time);
                 }
