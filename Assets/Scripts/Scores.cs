@@ -6,14 +6,16 @@ using UnityEngine;
 public class Scores : MonoBehaviour
 {
     public TextMeshProUGUI hs;
-    public Save Managerp;
+     Save Managerp;
+    public GameObject manager;
     public TextMeshProUGUI ts;
     public GameObject ne;
     public float actuallap;
     public float hslap;
     private void Awake()
     {
-        Managerp = Managerp.GetComponent<Save>();
+        manager = GameObject.Find("Manager");
+        Managerp = manager.GetComponent<Save>();
         hs = hs.GetComponent<TextMeshProUGUI>();
         ts = ts.GetComponent<TextMeshProUGUI>();
         actuallap = GameObject.Find("Meta").GetComponent<Meta>().besttime;

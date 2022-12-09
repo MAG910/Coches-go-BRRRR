@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8c9a0df30b7eb4da93d7ee0a2ac520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  city: {fileID: 2100000, guid: 5faf319a33606ea449bc9645afd6df9e, type: 2}
   countdown: 3
   cam: {fileID: 0}
   started: 0

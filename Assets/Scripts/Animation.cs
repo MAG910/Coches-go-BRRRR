@@ -7,15 +7,25 @@ using UnityEngine.UI;
 
 public class Animation : MonoBehaviour
 {
+    public Material city;
     public int countdown=3;
     public GameObject cam;
+    public GameObject UI;
     public bool started = false;
     public Rigidbody rb;
     public GameObject contador;
     public GameObject mapa;
     // Start is called before the first frame update
+    private void Awake()
+    {
+
+        Color a = city.color;
+        a.a = 0f;
+        city.color = a;
+    }
     void Start()
     {
+
         transform.position = cam.transform.position;
     }
 
@@ -30,6 +40,10 @@ public class Animation : MonoBehaviour
             StartCoroutine(display());
             
         }
+
+        Color a = city.color;
+        a.a = Mathf.Lerp(a.a, 0.4f, Time.deltaTime /5);
+        city.color= a;
         float x = Mathf.LerpAngle(transform.rotation.x, cam.transform.rotation.x, Time.deltaTime);
         float y = Mathf.LerpAngle(transform.rotation.y, cam.transform.rotation.y, Time.deltaTime);
         float z = Mathf.LerpAngle(transform.rotation.z, cam.transform.rotation.z, Time.deltaTime);
@@ -57,7 +71,7 @@ public class Animation : MonoBehaviour
         }
         if (countdown == 0)
         {
-            
+            UI.GetComponent<UIS>().canPause = true;
             rb.constraints = RigidbodyConstraints.None;
             rb.constraints = RigidbodyConstraints.FreezeRotationY;
             rb.gameObject.GetComponent<DriftController>().enabled = true;

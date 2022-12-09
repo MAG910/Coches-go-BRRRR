@@ -14,6 +14,7 @@ public enum Faction {
 
 public class DriftController : MonoBehaviour
 {
+    private bool vibration = true;
     public UIS UIS;
     public bool canPause;
 
@@ -29,7 +30,8 @@ public class DriftController : MonoBehaviour
     //public float Boost = 4f/3;          // In ratio
     public float TopSpeed = 30.0f;      // In meters/second
     //public float Jump = 3.0f;           // In meters/second2
-    public float GripX = 12.0f;          // In meters/second2
+    public float GripX = 12.0f;
+    public float GripY = 12.0f;          // In meters/second2
     public float GripZ = 3.0f;          // In meters/second2
     public float Rotate = 190;       // In degree/second
     public float RotVel = 0.8f;         // Ratio of forward velocity transfered on rotation
@@ -69,6 +71,7 @@ public class DriftController : MonoBehaviour
     float rotate;
     float accel;
     float gripX;
+    float gripY;
     float gripZ;
     float rotVel;
     float slip;     // The value used based on Slip curves
@@ -107,7 +110,7 @@ public class DriftController : MonoBehaviour
     {
         Controles = new Controls();
         Controles.P1.Enable();
-        Controles.UI.Disable();
+
     }
     // Use this for initialization
     void Start()
@@ -138,15 +141,19 @@ public class DriftController : MonoBehaviour
     {
         //Debug.DrawRay(transform.position, rigidBody.velocity / 2, Color.green);
 
-        // Reset to spawn if out of bounds
-        /*if (transform.position.y < -10) {
-            transform.position = spawnP;
-            transform.rotation = spawnR;
-            inReset = true;
-        }*/
+      
 
-
-
+        if (Gamepad.current != null && breake != 0 && !Nitro &&  vibration)
+        {
+            Gamepad.current.SetMotorSpeeds(Mathf.Abs(breake / 10), Mathf.Abs(breake / 10));
+        }
+        else if(Gamepad.current != null && breake == 0 && Nitro&& vibration){
+            Gamepad.current.SetMotorSpeeds(1, 1);
+        }
+        else if(Gamepad.current != null && breake == 0 && !Nitro&& vibration)
+        {
+            Gamepad.current.SetMotorSpeeds(0, 0);
+        }
         if (breake > 0 && !Nitro)
         {
             Accel = a - 30 * breake;
@@ -159,8 +166,6 @@ public class DriftController : MonoBehaviour
         {
             Accel = a;
         }
-
-
         timedr += Time.deltaTime;
 
         if (timedr >= 7)
@@ -170,13 +175,22 @@ public class DriftController : MonoBehaviour
         }
 
 
+
+
+
+
+
+
+
         if (transform.InverseTransformDirection(rigidBody.velocity).x > 1f)
         {
             anim.SetFloat("Blend", Mathf.Lerp(anim.GetFloat("Blend"), 0, Time.deltaTime * 10));
+           
         }
         else if (transform.InverseTransformDirection(rigidBody.velocity).x < -1f)
         {
             anim.SetFloat("Blend", Mathf.Lerp(anim.GetFloat("Blend"), 1, Time.deltaTime * 10));
+    
         }
         else
         {
@@ -196,15 +210,16 @@ public class DriftController : MonoBehaviour
     void FixedUpdate()
     {
         move = Controles.P1.Sideways.ReadValue<float>();
-        restart = Controles.P1.Reset.ReadValue<float>();
+ 
         breake = Controles.P1.Break.ReadValue<float>();
-        startb = Controles.P1.Start.ReadValue<float>();
+
 
 
         #region Situational Checks
         accel = Accel;
         rotate = Rotate;
         gripX = GripX;
+        gripY = GripY;
         gripZ = GripZ;
         rotVel = RotVel;
         rigidBody.angularDrag = AngDragG;
@@ -214,6 +229,8 @@ public class DriftController : MonoBehaviour
         accel = accel > 0f ? accel : 0f;
         gripZ = gripZ * Mathf.Cos(transform.eulerAngles.x * Mathf.Deg2Rad);
         gripZ = gripZ > 0f ? gripZ : 0f;
+        gripY = gripY * Mathf.Cos(transform.eulerAngles.y * Mathf.Deg2Rad);
+        gripY = gripY > 0f ? gripY : 0f;
         gripX = gripX * Mathf.Cos(transform.eulerAngles.z * Mathf.Deg2Rad);
         gripX = gripX > 0f ? gripX : 0f;
 
@@ -224,6 +241,7 @@ public class DriftController : MonoBehaviour
             rotate = 0f;
             accel = 0f;
             gripX = 0f;
+            gripY = 0f;
             gripZ = 0f;
             rigidBody.angularDrag = AngDragA;
         }
@@ -243,25 +261,46 @@ public class DriftController : MonoBehaviour
         }
         else
         {
+
             rotate = pvel.magnitude / MaxRotSpd * rotate;
         }
 
-        if (rotate > Rotate) rotate = Rotate;
 
+        if (rotate > Rotate) rotate = Rotate;
+        
         // Calculate grip based on sideway velocity in hysteresis curve
         if (!inSlip)
         {
             // Normal => slip
             slip = this.SlipL.Evaluate(Mathf.Abs(pvel.x) / SlipMod);
+           
             if (slip == 1f) inSlip = true;
         }
         else
         {
             // Slip => Normal
+            
             slip = this.SlipU.Evaluate(Mathf.Abs(pvel.x) / SlipMod);
             if (slip == 0f) inSlip = false;
         }
+        if (slip != 0)
+        {
 
+            if (Gamepad.current != null && vibration && !Nitro)
+            {
+                Debug.Log(slip);
+                if (pvel.x > 0)
+                {
+                    Gamepad.current.SetMotorSpeeds(Mathf.Abs(slip * 5)*10, 0);
+                }
+                else if (pvel.x < 0)
+                {
+                    Gamepad.current.SetMotorSpeeds(0, Mathf.Abs(slip * 5 )*10);
+                }
+            }
+
+        }
+        
         DebugPlayer(slip);
 
         //rotate *= (1f + 0.5f * slip);   // Overall rotation, (body + vector)
@@ -287,14 +326,7 @@ public class DriftController : MonoBehaviour
             case Faction.Player:
                 InputKeyboard();
                 break;
-            case Faction.Enemy:
-                InputEnemy();    // Chase player
-                autoReset = true;
-                break;
-            case Faction.Neutral:
-                inThrottle = 1f; // Just straight
-                autoReset = true;
-                break;
+            
             default:
                 // Do nothing
                 break;
@@ -309,7 +341,7 @@ public class DriftController : MonoBehaviour
         vel = transform.InverseTransformDirection(rigidBody.velocity);
 
         // Rotate the velocity vector
-        // vel = pvel => Transfer all (full grip)
+        //vel = pvel; => Transfer all (full grip)
         if (isRotating)
         {
             vel = vel * (1 - rotVel) + pvel * rotVel; // Partial transfer
@@ -325,6 +357,7 @@ public class DriftController : MonoBehaviour
         isForward = vel.z > 0f ? 1f : -1f;
         vel.z -= isForward * gripZ * Time.deltaTime;
         if (vel.z * isForward < 0f) vel.z = 0f;
+
 
         // Top speed
         if (vel.z > TopSpeed) vel.z = TopSpeed;
@@ -353,22 +386,7 @@ public class DriftController : MonoBehaviour
 
     }
 
-    void InputEnemy()
-    {
-        inThrottle = 1f;
-
-        // Turn by facing player
-        // Get the angle between the points (absolute goal) = right (target) - left
-        float angle = AngleOffset(Angle2Points(transform.position, Target.position), 0f);
-
-        Vector3 rot = transform.eulerAngles;
-        float delta = Mathf.DeltaAngle(rot.y, angle);
-        //inTurn = delta > 0f ? 1f : -1f;
-
-        if (delta > 10f) inTurn = 1f;
-        else if (delta < -10f) inTurn = -1f;
-        else inTurn = 0f;
-    }
+   
 
     // Executing the queued inputs
     void Controller()
@@ -398,11 +416,7 @@ public class DriftController : MonoBehaviour
 
         if (inReset)
         {  // Reset
-            float y = transform.eulerAngles.y;
-            transform.eulerAngles = new Vector3(0, y, 0);
-            rigidBody.velocity = new Vector3(0, -1f, 0);
-            transform.position += Vector3.up * 2;
-            inReset = false;
+            UIS.GameO();
         }
 
         isRotating = false;
@@ -411,11 +425,10 @@ public class DriftController : MonoBehaviour
         pvel = transform.InverseTransformDirection(rigidBody.velocity);
 
         // Turn statically
-        if (inTurn > 0.1f || inTurn < -0.1f)
-        {
+
             float dir = (pvel.z < 0) ? -1 : 1;    // To fix direction on reverse
             RotateGradConst(inTurn * dir);
-        }
+        
     }
     #endregion
 
@@ -454,19 +467,7 @@ public class DriftController : MonoBehaviour
         //if (carFaction == Faction.Player) Debug.Log(message);
     }
 
-    float Angle2Points(Vector3 a, Vector3 b)
-    {
-        //return Mathf.Atan2(b.y - a.y, b.x - a.x) * Mathf.Rad2Deg;
-        return Mathf.Atan2(b.x - a.x, b.z - a.z) * Mathf.Rad2Deg;
-    }
-
-    float AngleOffset(float raw, float offset)
-    {
-        raw = (raw + offset) % 360;             // Mod by 360, to not exceed 360
-        if (raw > 180.0f) raw -= 360.0f;
-        if (raw < -180.0f) raw += 360.0f;
-        return raw;
-    }
+    
 
     // Get bound of a large 
     public static Bounds GetBounds(GameObject obj)

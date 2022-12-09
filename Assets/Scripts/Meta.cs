@@ -16,7 +16,16 @@ public class Meta : MonoBehaviour
     public GameObject blok;
     public bool hasStartedLap = false;
     float startTime;
-
+    private void Awake()
+    {
+        RaycastHit a;
+        Debug.DrawRay(transform.position, -transform.up, Color.green, 100);
+        if (Physics.Raycast(transform.position, -transform.up, out a))
+        {
+            transform.position = a.point;
+            transform.up = a.normal;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")

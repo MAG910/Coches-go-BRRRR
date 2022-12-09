@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\ChangeSceneOnEnterOrSecs.cs" />
     <Compile Include="Assets\Scripts\Turbo.cs" />
     <Compile Include="Assets\Scripts\die.cs" />
+    <Compile Include="Assets\Scripts\SelectButton.cs" />
     <Compile Include="Assets\Scripts\UIS.cs" />
     <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
