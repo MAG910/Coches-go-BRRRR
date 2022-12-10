@@ -194,7 +194,6 @@ public class UIS : MonoBehaviour
     }
     public void PostP(bool toggle)
     {
-        int b;
         if (toggle) {
             PlayerPrefs.SetInt("Post", 1);
         }

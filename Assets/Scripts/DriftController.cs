@@ -65,7 +65,7 @@ public class DriftController : MonoBehaviour
     #region Intermediate
     Rigidbody rigidBody;
     Bounds groupCollider;
-    float distToGround;
+    public float distToGround;
 
     // The actual value to be used (modification of parameters)
     float rotate;
@@ -209,6 +209,7 @@ public class DriftController : MonoBehaviour
     // (according to physics setting)
     void FixedUpdate()
     {
+        Debug.Log(isRotating);
         move = Controles.P1.Sideways.ReadValue<float>();
  
         breake = Controles.P1.Break.ReadValue<float>();
@@ -235,7 +236,7 @@ public class DriftController : MonoBehaviour
         gripX = gripX > 0f ? gripX : 0f;
 
         // A short raycast to check below
-        isGrounded = Physics.Raycast(transform.position, -transform.up, distToGround + 0.1f);
+        /*isGrounded = Physics.Raycast(transform.position, -transform.up, distToGround + 0.1f);
         if (!isGrounded)
         {
             rotate = 0f;
@@ -252,7 +253,7 @@ public class DriftController : MonoBehaviour
         if (isStumbling)
         {
             //rotate = 0f;
-        }
+        }*/
 
         // Start turning only if there's velocity
         if (pvel.magnitude < MinRotSpd)
@@ -288,7 +289,7 @@ public class DriftController : MonoBehaviour
 
             if (Gamepad.current != null && vibration && !Nitro)
             {
-                Debug.Log(slip);
+                
                 if (pvel.x > 0)
                 {
                     Gamepad.current.SetMotorSpeeds(Mathf.Abs(slip * 5)*10, 0);
@@ -357,7 +358,6 @@ public class DriftController : MonoBehaviour
         isForward = vel.z > 0f ? 1f : -1f;
         vel.z -= isForward * gripZ * Time.deltaTime;
         if (vel.z * isForward < 0f) vel.z = 0f;
-
 
         // Top speed
         if (vel.z > TopSpeed) vel.z = TopSpeed;
