@@ -72,8 +72,13 @@ public class Animation : MonoBehaviour
         if (countdown == 0)
         {
             UI.GetComponent<UIS>().canPause = true;
+
+            RigidbodyConstraints a = rb.constraints;
             rb.constraints = RigidbodyConstraints.None;
-            rb.constraints = RigidbodyConstraints.FreezeRotationY;
+            a &= ~RigidbodyConstraints.FreezePosition;
+            rb.constraints = a;
+            
+
             rb.gameObject.GetComponent<DriftController>().enabled = true;
             contador.gameObject.SetActive(false);
             mapa.gameObject.SetActive(true);

@@ -19,10 +19,10 @@ public class ObstaculosGen : MonoBehaviour
     void Awake()
     {
         Instantiate(muerte,new Vector3(0,-30,0),muerte.transform.rotation);
+        Instantiate(muerte, new Vector3(0, 130, 0), muerte.transform.rotation);
         foreach (Transform child in transform)
         {
             RaycastHit a;
-            Debug.DrawRay(child.transform.position, -child.transform.up,Color.green,100);
             if (Physics.Raycast(child.transform.position,-child.transform.up, out a))
             {
                 child.transform.position = a.point;

@@ -4,14 +4,19 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class UIS : MonoBehaviour
 {
     Resolution[] resolutions;
     public RenderTexture im;
     public bool canPause = false;
+    public TMP_Dropdown gra;
     public TMP_Dropdown res;
+    public Slider pixelation;
+    public Slider sound;
+    public Toggle full;
+    public Toggle postpro;
     public GameObject text;
     public AudioMixer mixer;
     public GameObject post;
@@ -47,6 +52,8 @@ public class UIS : MonoBehaviour
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         pausep = false;
         Controls.P1.Enable();
+
+
         if (PlayerPrefs.GetFloat("Pixel") != 0 && PlayerPrefs.GetFloat("Pixel") >=0 )
         { 
             pixel(PlayerPrefs.GetFloat("Pixel"));
@@ -56,7 +63,9 @@ public class UIS : MonoBehaviour
             PlayerPrefs.SetFloat("Pixel", 0.25f);
             pixel(PlayerPrefs.GetFloat("Pixel"));
         }
-       
+        pixelation.SetValueWithoutNotify(PlayerPrefs.GetFloat("Pixel"));
+
+
         if (PlayerPrefs.GetFloat("Volumen") <= 0&& PlayerPrefs.GetFloat("Volumen") >= -80f)
         {
             volumen(PlayerPrefs.GetFloat("Volumen"));
@@ -66,6 +75,8 @@ public class UIS : MonoBehaviour
             PlayerPrefs.SetFloat("Volumen", 0);
             volumen(PlayerPrefs.GetFloat("Volumen"));
         }
+        sound.SetValueWithoutNotify(PlayerPrefs.GetFloat("Volumen"));
+
 
         if (PlayerPrefs.GetInt("Resol" ) != 0 && PlayerPrefs.GetInt("Grafics") <= resolutions.Length) { 
         resol(PlayerPrefs.GetInt("Resol")); 
@@ -192,6 +203,8 @@ public class UIS : MonoBehaviour
     {
         Time.timeScale = 0.0f;
     }
+
+
     public void PostP(bool toggle)
     {
         if (toggle) {
@@ -201,19 +214,20 @@ public class UIS : MonoBehaviour
         {
             PlayerPrefs.SetInt("Post", 0);
         }
-        
+        postpro.SetIsOnWithoutNotify(toggle);
         post.SetActive(toggle);
     }
     public void volumen(float a)
     {
         PlayerPrefs.SetFloat("Volumen", a);
         mixer.SetFloat("volume",a);
-        
+        sound.SetValueWithoutNotify(a);
     }
     public void Graphs(int graphS)
     {
         PlayerPrefs.SetInt("Grafics",graphS);
         QualitySettings.SetQualityLevel(graphS);
+        gra.SetValueWithoutNotify(graphS);
     }
     public void Full( bool scren)
     {
@@ -226,17 +240,19 @@ public class UIS : MonoBehaviour
         {
             PlayerPrefs.SetInt("Full", 0);
         }
-        Screen.fullScreen=scren;    
-        
+        Screen.fullScreen=scren;
+        full.SetIsOnWithoutNotify(scren);
     }
     public void resol(int index)
     {
         PlayerPrefs.SetInt("Resol", index);
         Resolution resolution = resolutions[index];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        res.SetValueWithoutNotify(index);
     }
     public void pixel(float a)
     {
+        pixelation.SetValueWithoutNotify(a);
         PlayerPrefs.SetFloat("Pixel", a);
         im.Release();
         im.height= (int)(Screen.height *a);
