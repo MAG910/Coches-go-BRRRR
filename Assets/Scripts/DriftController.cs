@@ -270,6 +270,8 @@ public class DriftController : MonoBehaviour
              else
             {
                 jump();
+
+            }
         }
         else
         {
@@ -422,11 +424,10 @@ public class DriftController : MonoBehaviour
         // Get the local-axis velocity before new input (+x, +y, and +z = right, up, and forward)
         pvel = transform.InverseTransformDirection(rigidBody.velocity);
 
-        if (inTurn > 0.1f || inTurn < -0.1f)
-        {
+        
             float dir = (pvel.z < 0) ? -1 : 1;    // To fix direction on reverse
             RotateGradConst(inTurn * dir);
-        }
+        
 
     }
     #endregion
